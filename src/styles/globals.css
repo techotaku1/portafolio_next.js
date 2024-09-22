@@ -1,0 +1,21 @@
+/* styles/globals.css */
+
+/* Aplica margen o padding lateral al body */
+body {
+    margin: 0;
+    padding: 0 4rem; /* Ajusta el padding lateral según tus necesidades */
+    box-sizing: border-box;
+  }
+  
+  /* Opcional: Si prefieres, puedes crear una clase específica para usar en divs */
+  .contenedor-lateral {
+    padding: 0 4rem; /* Añade espacio en blanco a los lados */
+  }
+  
+  /* Ajusta elementos específicos si es necesario */
+  header,
+  nav {
+    width: 100%;
+    padding: 0; /* Asegúrate de que los elementos ocupen el 100% y sigan las reglas de padding */
+  }
+  
