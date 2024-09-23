@@ -1,0 +1,27 @@
+MI-PORTAFOLIO/
+├── src/
+│   ├── app/
+│   │   ├── layout.js            // Diseño global de la aplicación
+│   │   ├── page.js              // Página principal
+│   │   ├── not-found.js          // Página personalizada para 404
+│   │   ├── template.js           // Plantilla reutilizable (si es necesaria)
+│   │   ├── components/           // Componentes reutilizables
+│   │   │   ├── navbar.js         // Componente de navegación
+│   │   │   ├── footer.js         // Componente de pie de página
+│   │   │   └── profile.js        // Componente de perfil
+│   │   └── dashboard/            // Sección del panel de control
+│   │       ├── layout.js         // Diseño específico del dashboard
+│   │       ├── page.js           // Página principal del dashboard
+│   │       ├── blog/             // Sección de blog dentro del dashboard
+│   │       │   └── page.js       // Página del blog
+│   │       └── github/           // Sección de GitHub dentro del dashboard
+│   │           └── page.js       // Página de GitHub
+│   └── styles/                   // Carpeta para estilos (CSS Modules, etc.)
+│       ├── global.css            // Estilos globales
+│       └── MiComponente.module.css // Ejemplo de CSS Module
+├── public/                       // Archivos estáticos
+│   └── imagen.png
+├── package.json
+├── next.config.js
+├── .gitignore
+└── README.md
