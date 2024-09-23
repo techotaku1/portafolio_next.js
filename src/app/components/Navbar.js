@@ -4,8 +4,7 @@ import Link from "next/link";
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div className="container">
-      {" "}
-      {/* Ajusta el contenedor para agregar márgenes laterales */}
+      {/* Marca de la navegación */}
       <Link href="/" className="navbar-brand">
         Portfolio
       </Link>
@@ -23,12 +22,12 @@ const Navbar = () => (
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto d-flex align-items-center">
           <li className="nav-item">
-            <Link href="/blog" className="nav-link">
+            <Link href="/dashboard/blog" className="nav-link">
               Blog
             </Link>
           </li>
           <li className="nav-item">
-            <Link href="/github" className="nav-link">
+            <Link href="/dashboard/github" className="nav-link">
               GitHub
             </Link>
           </li>

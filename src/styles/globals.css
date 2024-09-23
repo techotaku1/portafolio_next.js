@@ -1,21 +1,14 @@
-/* styles/globals.css */
-
-/* Aplica margen o padding lateral al body */
-body {
-    margin: 0;
-    padding: 0 4rem; /* Ajusta el padding lateral según tus necesidades */
-    box-sizing: border-box;
+/* src/styles/globals.css */
+.overflow {
+    overflow: hidden;
   }
   
-  /* Opcional: Si prefieres, puedes crear una clase específica para usar en divs */
-  .contenedor-lateral {
-    padding: 0 4rem; /* Añade espacio en blanco a los lados */
+  .overflow .card-img-top {
+    height: auto; 
+    transition: all 0.2s ease-in-out; /* Suaviza la transición de escala */
   }
   
-  /* Ajusta elementos específicos si es necesario */
-  header,
-  nav {
-    width: 100%;
-    padding: 0; /* Asegúrate de que los elementos ocupen el 100% y sigan las reglas de padding */
+  .overflow .card-img-top:hover {
+    transform: scale(1.2); /* Ajusta el nivel de escala */
   }
   

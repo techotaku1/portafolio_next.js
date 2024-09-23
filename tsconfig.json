@@ -26,12 +26,13 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/Layout.js",
-    "src/components/Navbar.js",
+    "src/app/components/Layout.js",
+    "src/app/components/Navbar.js",
     "src/pages/_app.js",
     "src/pages/blog.js",
     "src/pages/github.js",
-    "src/pages/index.js"
+    "src/pages/index.js",
+    "src/page.js"
   ],
   "exclude": ["node_modules"]
 }
