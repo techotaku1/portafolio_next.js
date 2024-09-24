@@ -8,10 +8,10 @@ import { skills, experience, portfolio } from "./components/profile"; // Asegúr
 const Home = () => (
   <div className="container my-4">
     <ProfileSection />
-    <div className="row">
+     <div className="row">
       <SkillsSection skills={skills} />
       <ExperienceSection experience={experience} />
-    </div>
+      </div>
     <PortfolioSection portfolio={portfolio} />
   </div>
 );

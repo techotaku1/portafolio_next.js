@@ -1,7 +1,10 @@
 // src/app/components/SkillsSection.js
 const SkillsSection = ({ skills }) => (
-  <div className="col-md-6 d-flex">
-    <div className="card bg-light mb-3 w-100">
+  <div className="col-md-6">
+    <div
+      className="card bg-light mb-3 w-100 d-flex align-items-stretch"
+      style={{ minHeight: "300px" }}
+    >
       <div className="card-body">
         <h1 className="card-title fw-bold">Skills</h1>
         {skills.map((item, index) => (
