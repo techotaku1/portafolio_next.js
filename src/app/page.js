@@ -5,15 +5,15 @@ import ExperienceSection from "./components/ExperienceSection";
 import PortfolioSection from "./components/PortfolioSection";
 import { skills, experience, portfolio } from "./components/profile"; // Asegúrate de que la ruta sea correcta
 
-const Home = () => (
-  <div className="container my-4">
+const Page = () => (
+  <>
     <ProfileSection />
-     <div className="row">
+    <div className="row">
       <SkillsSection skills={skills} />
       <ExperienceSection experience={experience} />
-      </div>
+    </div>
     <PortfolioSection portfolio={portfolio} />
-  </div>
+  </>
 );
 
-export default Home;
+export default Page;

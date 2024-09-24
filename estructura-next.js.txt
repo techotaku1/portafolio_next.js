@@ -1,28 +1,32 @@
 MI-PORTAFOLIO/
 ├── src/
-│   ├── app/
-│   │   ├── layout.js
-│   │   ├── page.js
-│   │   ├── not-found.js
-│   │   ├── template.js
-│   │   ├── components/
-│   │   │   ├── navbar.js
-│   │   │   ├── footer.js
-│   │   │   ├── profile.js
-│   │   │   └── navigation-events.js   // Nuevo archivo para eventos de navegación
-│   │   └── dashboard/
-│   │       ├── layout.js
-│   │       ├── page.js
-│   │       ├── blog/
-│   │       │   └── page.js
-│   │       └── github/
-│   │           └── page.js
-│   └── styles/
-│       ├── global.css
-│       └── MiComponente.module.css
-├── public/
-│   └── imagen.png
-├── package.json
-├── next.config.js
-├── .gitignore
-└── README.md
+│   ├── app/                           // Carpeta principal del proyecto Next.js
+│   │   ├── layout.js                  // Layout global que envuelve todas las páginas
+│   │   ├── page.js                    // Página principal (home) del proyecto
+│   │   ├── not-found.js               // Página que muestra cuando no se encuentra una ruta
+│   │   ├── template.js                // Template que se aplica a nivel global para todas las páginas
+│   │   ├── components/                // Carpeta de componentes reutilizables
+│   │   │   ├── navbar.js              // Componente de la barra de navegación
+│   │   │   ├── footer.js              // Componente del pie de página
+│   │   │   ├── profile.js             // Componente del perfil del usuario
+│   │   │   ├── navigation-events.js   // Componente para manejar los eventos de navegación con NProgress
+│   │   │   ├── ExperienceSection.js   // Componente para mostrar la sección de experiencia
+│   │   │   ├── PortfolioSection.js    // Componente para mostrar la sección de portafolio
+│   │   │   ├── ProfileSection.js      // Componente para mostrar la sección de perfil
+│   │   │   └── SkillsSection.js       // Componente para mostrar la sección de habilidades
+│   │   └── dashboard/                 // Carpeta para el dashboard de la aplicación
+│   │       ├── layout.js              // Layout específico del dashboard
+│   │       ├── page.js                // Página principal del dashboard
+│   │       ├── blog/                  // Subcarpeta para las páginas del blog dentro del dashboard
+│   │       │   └── page.js            // Página del blog dentro del dashboard
+│   │       └── github/                // Subcarpeta para las páginas de GitHub dentro del dashboard
+│   │           └── page.js            // Página de GitHub dentro del dashboard
+│   └── styles/                        // Carpeta de estilos del proyecto
+│       ├── global.css                 // Estilos globales de la aplicación
+│       └── MiComponente.module.css    // Estilos específicos para componentes usando CSS Modules
+├── public/                            // Carpeta para archivos públicos accesibles desde el navegador
+│   └── imagen.png                     // Ejemplo de imagen accesible desde la URL pública
+├── package.json                       // Archivo de configuración del proyecto y dependencias
+├── next.config.js                     // Archivo de configuración de Next.js
+├── .gitignore                         // Archivo para ignorar archivos y carpetas en el control de versiones
+└── README.md                          // Documentación del proyecto

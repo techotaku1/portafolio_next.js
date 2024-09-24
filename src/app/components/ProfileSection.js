@@ -25,4 +25,5 @@ const ProfileSection = () => (
     </div>
   </div>
 );
+
 export default ProfileSection;

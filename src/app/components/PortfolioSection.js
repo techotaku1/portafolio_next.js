@@ -39,4 +39,5 @@ const PortfolioSection = ({ portfolio }) => (
     </div>
   </div>
 );
+
 export default PortfolioSection;

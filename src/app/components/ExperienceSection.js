@@ -1,6 +1,8 @@
 // src/app/components/ExperienceSection.js
 const ExperienceSection = ({ experience }) => (
+  
   <div className="col-md-6">
+    
     <div
       className="card bg-light mb-3 w-100 d-flex align-items-stretch"
       style={{ minHeight: "400px" }}
@@ -19,6 +21,7 @@ const ExperienceSection = ({ experience }) => (
       </div>
     </div>
   </div>
+  
 );
 
 export default ExperienceSection;
