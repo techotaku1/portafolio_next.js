@@ -1,10 +1,9 @@
-
 export const skills = [
   { skill: "React", percentage: 80 },
   { skill: "Next.js", percentage: 70 },
   { skill: "Javascript", percentage: 90 },
   { skill: "Python", percentage: 90 },
-  { skill: "FastAPI", percentage: 70 }
+  { skill: "FastAPI", percentage: 70 },
 ];
 
 export const experience = [
@@ -17,7 +16,7 @@ export const experience = [
     title: "Desarrollador Backend",
     from: "2022-2024",
     description: "Creé APIs REST-CRUD utilizando Python y FastAPI.",
-  }
+  },
 ];
 
 export const portfolio = [
@@ -52,5 +51,4 @@ export const portfolio = [
     image: "/portfolio6.jpeg", // Ruta de la imagen
   },
   // Agrega más proyectos aquí
-
 ];

@@ -1,13 +1,13 @@
-import Navbar from '@/app/components/Navbar';
-import Footer from '@/app/components/Footer';
-import  {NavigationEvents}  from '@/app/components/navigation-events';
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import { NavigationEvents } from "@/app/components/navigation-events";
 
 export default function Template({ children }) {
   return (
     <>
       <NavigationEvents />
       <Navbar />
-      <main >{children}</main>
+      <div>{children}</div>
       <Footer />
     </>
   );

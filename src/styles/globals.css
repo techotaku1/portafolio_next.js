@@ -1,8 +1,6 @@
 /* src/styles/globals.css */
 .overflow {
   overflow: hidden;
-  
-  
 }
 
 .overflow .card-img-top {
@@ -13,4 +11,3 @@
 .overflow .card-img-top:hover {
   transform: scale(1.2); /* Ajusta el nivel de escala */
 }
-

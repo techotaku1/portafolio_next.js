@@ -1,6 +1,6 @@
-'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -25,12 +25,22 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto d-flex align-items-center">
             <li className="nav-item">
-              <Link href="/dashboard/blog" className={`nav-link ${pathname === '/dashboard/blog' ? 'active' : ''}`}>
+              <Link
+                href="/dashboard/blog"
+                className={`nav-link ${
+                  pathname === "/dashboard/blog" ? "active" : ""
+                }`}
+              >
                 Blog
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/dashboard/github" className={`nav-link ${pathname === '/dashboard/github' ? 'active' : ''}`}>
+              <Link
+                href="/dashboard/github"
+                className={`nav-link ${
+                  pathname === "/dashboard/github" ? "active" : ""
+                }`}
+              >
                 GitHub
               </Link>
             </li>
