@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProfileSection = () => (
-  <div className="container d-flex align-items-center bg-dark text-white py-4 mb-4">
+  <div className="container d-flex align-items-center bg-dark text-white py-4 mb-3">
     <Image
       src="/mi-imagen2.jpg"
       alt="Foto de perfil"

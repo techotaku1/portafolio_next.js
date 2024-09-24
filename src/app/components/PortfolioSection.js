@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const PortfolioSection = ({ portfolio }) => (
   <div className="card card-body bg-dark">
-    <div className="row">
+    <div className="row ">
       <div className="col-md-12">
-        <h1 className="text-center text-light">Portfolio</h1>
+        <h1 className="text-center text-light ">Portfolio</h1>
       </div>
 
       {portfolio.map((project, index) => (
         <div className="col-md-4 p-2" key={index}>
-          <div className="card h-100">
+          <div className="card h-100 ">
             <div className="overflow">
               <Image
                 src={project.image}
@@ -32,8 +32,8 @@ const PortfolioSection = ({ portfolio }) => (
         </div>
       ))}
     </div>
-    <div className="col-md-12">
-      <Link href="/portfolio" className="btn btn-outline-light mt-2">
+    <div className="col-md-12 ">
+      <Link href="/portfolio" className="btn btn-outline-light mt-2 ">
         Mas Proyectos
       </Link>
     </div>

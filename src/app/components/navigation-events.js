@@ -3,25 +3,29 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import nprogress from "nprogress";
+import "nprogress/nprogress.css"; // Asegúrate de importar los estilos de NProgress
 
 export function NavigationEvents() {
   const pathname = usePathname();
 
   useEffect(() => {
     // Iniciar NProgress al cambiar de ruta
-    nprogress.start();
+    const handleRouteChangeStart = () => {
+      nprogress.start();
+    };
 
     // Completar NProgress al finalizar el renderizado
-    const handleComplete = () => {
+    const handleRouteChangeEnd = () => {
       nprogress.done();
     };
 
-    // Completar NProgress después de un breve retraso para permitir que el contenido se cargue
-    const timeoutId = setTimeout(handleComplete, 1000); // Ajusta el tiempo según sea necesario
+    // Asignar eventos para manejar la navegación
+    handleRouteChangeStart(); // Iniciar NProgress al cambiar de ruta
+    handleRouteChangeEnd(); // Completar NProgress al finalizar el renderizado
 
+    // Retorna una función de limpieza para asegurarse de que NProgress esté completo
     return () => {
-      clearTimeout(timeoutId); // Limpia el timeout al desmontar
-      nprogress.done(); // Asegúrate de que NProgress esté completo al desmontar
+      nprogress.done();
     };
   }, [pathname]);
 

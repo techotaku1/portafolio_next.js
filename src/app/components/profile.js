@@ -4,7 +4,6 @@ export const skills = [
   { skill: "Javascript", percentage: 90 },
   { skill: "Python", percentage: 90 },
   { skill: "FastAPI", percentage: 70 },
-  { skill: "Docker", percentage: 70 },
 ];
 
 export const experience = [
@@ -12,16 +11,6 @@ export const experience = [
     title: "Desarrollador Frontend",
     from: "2022-2024",
     description: "Desarrollé aplicaciones web utilizando React y Next.js.",
-  },
-  {
-    title: "Desarrollador Backend",
-    from: "2022-2024",
-    description: "Creé APIs REST-CRUD utilizando Python y FastAPI.",
-  },
-  {
-    title: "Desarrollador Backend",
-    from: "2022-2024",
-    description: "Creé APIs REST-CRUD utilizando Python y FastAPI.",
   },
   {
     title: "Desarrollador Backend",
