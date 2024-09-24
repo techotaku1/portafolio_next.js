@@ -1,4 +1,4 @@
-// src/app/dashboard/components/profile.js
+
 export const skills = [
   { skill: "React", percentage: 80 },
   { skill: "Next.js", percentage: 70 },

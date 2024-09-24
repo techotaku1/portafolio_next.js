@@ -1,3 +1,4 @@
+'use client';
 const Blog = () => {
   return (
     <div className="container mt-4">

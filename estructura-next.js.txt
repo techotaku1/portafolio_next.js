@@ -1,25 +1,26 @@
 MI-PORTAFOLIO/
 ├── src/
 │   ├── app/
-│   │   ├── layout.js            // Diseño global de la aplicación
-│   │   ├── page.js              // Página principal
-│   │   ├── not-found.js          // Página personalizada para 404
-│   │   ├── template.js           // Plantilla reutilizable (si es necesaria)
-│   │   ├── components/           // Componentes reutilizables
-│   │   │   ├── navbar.js         // Componente de navegación
-│   │   │   ├── footer.js         // Componente de pie de página
-│   │   │   └── profile.js        // Componente de perfil
-│   │   └── dashboard/            // Sección del panel de control
-│   │       ├── layout.js         // Diseño específico del dashboard
-│   │       ├── page.js           // Página principal del dashboard
-│   │       ├── blog/             // Sección de blog dentro del dashboard
-│   │       │   └── page.js       // Página del blog
-│   │       └── github/           // Sección de GitHub dentro del dashboard
-│   │           └── page.js       // Página de GitHub
-│   └── styles/                   // Carpeta para estilos (CSS Modules, etc.)
-│       ├── global.css            // Estilos globales
-│       └── MiComponente.module.css // Ejemplo de CSS Module
-├── public/                       // Archivos estáticos
+│   │   ├── layout.js
+│   │   ├── page.js
+│   │   ├── not-found.js
+│   │   ├── template.js
+│   │   ├── components/
+│   │   │   ├── navbar.js
+│   │   │   ├── footer.js
+│   │   │   ├── profile.js
+│   │   │   └── navigation-events.js   // Nuevo archivo para eventos de navegación
+│   │   └── dashboard/
+│   │       ├── layout.js
+│   │       ├── page.js
+│   │       ├── blog/
+│   │       │   └── page.js
+│   │       └── github/
+│   │           └── page.js
+│   └── styles/
+│       ├── global.css
+│       └── MiComponente.module.css
+├── public/
 │   └── imagen.png
 ├── package.json
 ├── next.config.js

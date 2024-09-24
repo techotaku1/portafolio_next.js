@@ -1,14 +1,16 @@
 /* src/styles/globals.css */
 .overflow {
-    overflow: hidden;
-  }
+  overflow: hidden;
   
-  .overflow .card-img-top {
-    height: auto; 
-    transition: all 0.2s ease-in-out; /* Suaviza la transición de escala */
-  }
   
-  .overflow .card-img-top:hover {
-    transform: scale(1.2); /* Ajusta el nivel de escala */
-  }
-  
+}
+
+.overflow .card-img-top {
+  transition: all 0.2s ease-in-out; /* Suaviza la transición de escala */
+  height: auto;
+}
+
+.overflow .card-img-top:hover {
+  transform: scale(1.2); /* Ajusta el nivel de escala */
+}
+

@@ -1,4 +1,4 @@
-// app/components/Footer.js
+'use client';
 const Footer = () => {
     return (
       <footer className="bg-dark text-light text-center py-3">
