@@ -8,3 +8,9 @@ fetch y res, puedes llamarlas funciones o APIs nativas.
 
 - Componentes Especiales:
 Link, Image, Suspense, NavigationEvents, no-found, global-error
+
+github/code
+
+git add .
+git commit -m "algunos cambios"
+git push origin main
