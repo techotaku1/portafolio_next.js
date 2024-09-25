@@ -30,3 +30,4 @@ MI-PORTAFOLIO/
 ├── next.config.js                     // Archivo de configuración de Next.js
 ├── .gitignore                         // Archivo para ignorar archivos y carpetas en el control de versiones
 └── README.md                          // Documentación del proyecto
+

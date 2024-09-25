@@ -9,8 +9,8 @@ const ProfileSection = () => (
       width={180}
       height={180}
       className="me-4 rounded"
-      priority 
-      style={{ objectFit: "cover", height: "auto" }}
+      priority
+      style={{ objectFit: 'cover', height: 'auto' }}
     />
     <div>
       <h1 className="h3 mb-1 fw-bold">Jose David Gonzalez</h1>

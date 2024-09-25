@@ -1,0 +1,7 @@
+Uso De Funcionalidades Especiales
+
+- Hooks: 
+Para usePathname, useState, useSearchParams, y useEffect, es correcto llamarlos hooks, ya que están diseñados para "enganchar" la lógica de React o Next.js en los componentes.
+
+- Funciones (APIs): 
+Para fetch y res, puedes llamarlas funciones o APIs nativas.

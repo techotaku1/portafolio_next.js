@@ -1,11 +1,12 @@
+// src/app/blog/page.js
 "use client";
-const Blog = () => {
+
+
+export default function Blog() {
   return (
-    <div className="container mt-4">
+    <div>
       <h1>Blog</h1>
-      <p>Aquí encontrarás artículos sobre diversos temas.</p>
+      {/* Contenido del blog aquí */}
     </div>
   );
-};
-
-export default Blog;
+}
