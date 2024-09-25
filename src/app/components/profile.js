@@ -3,7 +3,7 @@ export const skills = [
   { skill: "Next.js", percentage: 70 },
   { skill: "Javascript", percentage: 90 },
   { skill: "Python", percentage: 90 },
-  { skill: "FastAPI", percentage: 70 },
+  { skill: "FastAPI", percentage: 70 }
 ];
 
 export const experience = [

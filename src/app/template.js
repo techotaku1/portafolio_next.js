@@ -14,7 +14,7 @@ export default function Template({ children }) {
     <>
       <NavigationEvents />
       <Navbar />
-      <section className="container my-4 p-4 bg-light rounded shadow">
+      <section className="container my-3 p-3 bg-light rounded shadow">
         {children}
       </section>
       {/* Si la ruta actual no está en las rutas donde queremos ocultar el footer, lo mostramos */}

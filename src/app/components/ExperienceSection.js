@@ -9,7 +9,7 @@ const ExperienceSection = ({ experience }) => (
         <h1 className="card-title fw-bold">Experiencia</h1>
         <ul>
           {experience.map((item, index) => (
-            <li key={index} className="mb-4">
+            <li key={index} className="my-1">
               <h3>{item.title}</h3>
               <h5>{item.company}</h5>
               <p>{item.description}</p>

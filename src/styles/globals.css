@@ -5,11 +5,17 @@
 
 .overflow .card-img-top {
   transition: all 0.2s ease-in-out; /* Suaviza la transición de escala */
-  height: auto;
 }
 
 .overflow .card-img-top:hover {
   transform: scale(1.2); /* Ajusta el nivel de escala */
 }
+
+img {
+  height: auto;
+  object-fit: cover;
+  width: 135px;
+}
+
 
 

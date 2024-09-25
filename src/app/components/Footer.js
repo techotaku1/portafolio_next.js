@@ -1,7 +1,10 @@
 "use client";
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light text-center py-3">
+    <footer
+      className="bg text-light text-center py-4"
+      style={{ backgroundColor: "#4a90e2", color: "#ffffff" }} // Color de fondo y texto
+    >
       <div className="container">
         <p>
           &copy; {new Date().getFullYear()} Jose David Gonzalez. Todos los

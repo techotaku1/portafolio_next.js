@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PortfolioSection = ({ portfolio }) => (
-  <div className="card card-body bg-dark">
+  <div
+    className="card card-body "
+    style={{ backgroundColor: "#4a90e2", color: "#ffffff" }} // Color de fondo y texto
+  >
     <div className="row ">
       <div className="col-md-12">
         <h1 className="text-center text-light ">Portfolio</h1>
