@@ -52,3 +52,32 @@ export const portfolio = [
   },
   // Agrega más proyectos aquí
 ];
+
+const BlogItems = [
+  {
+    id: 1,
+    title: "GATSBY",
+    icon: "/gatsby.png", // Cambia por la ruta correcta de tu icono
+    link: "https://gatsbyjs.com/docs/" // Cambia por la URL que desees
+  },
+  {
+    id: 2,
+    title: "NEXT.JS",
+    icon: "/nextjs.png",
+    link: "https://nextjs.org/docs"
+  },
+  {
+    id: 3,
+    title: "EXPRESS",
+    icon: "/express.png",
+    link: "https://expressjs.com/es"
+  },
+  {
+    id: 4,
+    title: "DJANGO",
+    icon: "/django.png",
+    link: "https://docs.djangoproject.com"
+  }
+];
+
+export default BlogItems;

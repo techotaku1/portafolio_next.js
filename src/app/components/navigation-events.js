@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import LoadingBar from 'react-top-loading-bar';
@@ -34,7 +35,7 @@ const NavigationEvents = () => {
     };
   }, [pathname, searchParams]);
 
-  return <LoadingBar color="#39ff14" ref={loadingBarRef} height={4} progress={0} onLoaderFinished={() => {}} />;
+  return <LoadingBar color="#39ff14" ref={loadingBarRef} height={4} />; // Ajusta la altura aquí
 };
 
 export default NavigationEvents;

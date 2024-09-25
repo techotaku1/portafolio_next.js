@@ -3,6 +3,9 @@
 import { usePathname } from "next/navigation"; // Hook para obtener la ruta actual
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import NavigationEvents from "./components/navigation-events"; // Asegúrate de que la ruta sea correcta
+import { Suspense } from "react";
+
 
 export default function Template({ children }) {
   const pathname = usePathname(); // Obtenemos la ruta actual
@@ -13,7 +16,9 @@ export default function Template({ children }) {
   return (
     <>
       {/* Eventos de navegación para manejar la barra de progreso */}
-      
+      <Suspense fallback={<p>Cargando eventos de navegación...</p>}>
+        <NavigationEvents />
+      </Suspense>
       <Navbar />
       <section className="container my-3 p-3 bg-light rounded shadow">
         {children}

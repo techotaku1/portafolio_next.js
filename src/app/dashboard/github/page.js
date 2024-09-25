@@ -1,6 +1,5 @@
-// src/app/dashboard/github/page.js
 'use client'; 
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Loading from './loading'; // Importa el componente de carga
 
 export default function GitHub() {
@@ -30,7 +29,6 @@ export default function GitHub() {
     fetchData();
   }, []);
 
-  // En este caso, manejas el estado de carga en el componente, así que el Suspense no es necesario.
   if (loading) {
     return <Loading />; // Usa el componente de carga mientras se obtienen los datos
   }
@@ -44,35 +42,41 @@ export default function GitHub() {
   }
 
   return (
-    <div className="row">
-      <div className="col-md-12 offset-md-12">
-        <div className="card card-body text-center">
-          <h1>Mi GitHub</h1>
-          <p>Explora los detalles de mi cuenta en GitHub.</p>
-
-          {profile && (
-            <div>
-              <img
-                src={profile.avatar_url}
-                alt={profile.name}
-                style={{ borderRadius: "50%", width: "150px", height: "150px" }}
-              />
-              <h2>{profile.name}</h2>
-              <p>Biografía: {profile.bio}</p>
-              <p>Ubicación: {profile.location}</p>
-              <p>Repositorios públicos: {profile.public_repos}</p>
-              <p>Seguidores: {profile.followers}</p>
-              <p>Siguiendo: {profile.following}</p>
-              <a
-                href={profile.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-success"
-              >
-                Visitar mi perfil en GitHub
-              </a>
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+          <div className="card border">
+            <div className="card-header text-center" style={{ backgroundColor: '#4a9', color: 'white' }}>
+              <h1>Mi GitHub</h1>
             </div>
-          )}
+            <div className="card-body text-center">
+              {profile && (
+                <div>
+                  <img
+                    src={profile.avatar_url}
+                    alt={profile.name}
+                    className="rounded-circle border border-primary"
+                    style={{ width: "150px", height: "150px", objectFit: "cover" }}
+                  />
+                  <h2 className="mt-3">{profile.name}</h2>
+                  <p className="text-muted">{profile.bio || "No hay biografía disponible"}</p>
+                  <p><strong>Ubicación:</strong> {profile.location || "No especificada"}</p>
+                  <p><strong>Repositorios públicos:</strong> {profile.public_repos}</p>
+                  <p><strong>Seguidores:</strong> {profile.followers}</p>
+                  <p><strong>Siguiendo:</strong> {profile.following}</p>
+                  <a
+                    href={profile.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-light mt-3"
+                    style={{ backgroundColor: '#4a9', color: 'white', borderColor: '#4a90e2' }}
+                  >
+                    Visitar mi perfil en GitHub
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
