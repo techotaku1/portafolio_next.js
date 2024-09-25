@@ -1,6 +1,5 @@
 // src/app/dashboard/github/page.js
-'use client'; // Asegúrate de que este componente sea un Client Component
-
+'use client'; 
 import React, { useEffect, useState} from 'react';
 import Loading from './loading'; // Importa el componente de carga
 

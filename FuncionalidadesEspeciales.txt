@@ -7,4 +7,4 @@ usePathname, useState, useSearchParams, y useEffect, es correcto llamarlos hooks
 fetch y res, puedes llamarlas funciones o APIs nativas.
 
 - Componentes Especiales:
-Link, Image
+Link, Image, Suspense, NavigationEvents, no-found, global-error

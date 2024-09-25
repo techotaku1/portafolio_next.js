@@ -17,5 +17,11 @@ img {
   width: 135px;
 }
 
+/* Estilo para cambiar el color de los links al pasar el mouse y el cursor */
+.nav-link:hover {
+  color: black !important; /* Cambia el color del texto a negro */
+  cursor: pointer; /* Cambia el cursor a estilo de botón */
+}
+
 
 

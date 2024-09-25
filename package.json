@@ -9,19 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@eslint/config-array": "^0.18.0",
+    "@eslint/object-schema": "^2.1.4",
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
+    "glob": "^11.0.0",
     "next": "14.2.13",
     "nprogress": "^0.2.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/node": "^22.7.1",
+    "@types/react": "^18.3.9",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^8.0.0",
     "eslint-config-next": "14.2.13",
-    "typescript": "^5"
+    "typescript": "^5.5.4"
   }
 }
