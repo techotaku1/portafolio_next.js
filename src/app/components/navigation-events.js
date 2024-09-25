@@ -1,37 +1,40 @@
 "use client";
-import NProgress from 'nprogress';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
-import 'nprogress/nprogress.css'; // Importar los estilos de NProgress
+import LoadingBar from 'react-top-loading-bar';
 
 const NavigationEvents = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const loadingBarRef = useRef(null); // Referencia para la barra de carga
 
   useEffect(() => {
     const handleRouteChangeStart = () => {
-      NProgress.start();  // Comienza la barra de progreso
+      loadingBarRef.current.continuousStart(); // Inicia la barra de carga
     };
 
     const handleRouteChangeEnd = () => {
-      NProgress.done();  // Finaliza la barra de progreso
+      loadingBarRef.current.complete(); // Completa la barra de carga
       const url = `${pathname}${searchParams ? '?' + searchParams.toString() : ''}`;
       console.log("Current URL:", url);
     };
 
-    // Iniciar NProgress cuando la navegación comienza
+    // Inicia la barra de carga cuando la navegación comienza
     handleRouteChangeStart();
 
-    // Detener NProgress cuando la navegación termina
+    // Completa la barra de carga cuando la navegación termina
     handleRouteChangeEnd();
+
+    // Guardar la referencia de la barra de carga en una variable
+    const currentLoadingBar = loadingBarRef.current;
 
     // Limpieza
     return () => {
-      NProgress.remove(); // Remueve NProgress al desmontar el componente
+      currentLoadingBar.complete(); // Asegura que la barra se complete al desmontar
     };
   }, [pathname, searchParams]);
 
-  return null; // No renderiza nada, solo maneja los eventos de navegación
+  return <LoadingBar color="#39ff14" ref={loadingBarRef} height={4} progress={0} onLoaderFinished={() => {}} />;
 };
 
 export default NavigationEvents;

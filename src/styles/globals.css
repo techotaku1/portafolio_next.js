@@ -23,5 +23,10 @@ img {
   cursor: pointer; /* Cambia el cursor a estilo de botón */
 }
 
+.react-top-loading-bar {
+  height: 6px; /* Ajusta el grosor de la barra de carga */
+  transition: width 0.5s ease; /* Controla la velocidad de la barra de carga */
+}
+
 
 
