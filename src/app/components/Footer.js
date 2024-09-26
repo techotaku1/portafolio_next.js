@@ -1,26 +1,32 @@
-"use client";
+// src/app/components/Footer.js
+import { Box, Container, Typography, Link } from '@mui/material';
+
 const Footer = () => {
   return (
-    <footer
-      className="bg text-light text-center py-4"
-      style={{ backgroundColor: "#4a90e2", color: "#ffffff" }} // Color de fondo y texto
+    <Box
+      component="footer"
+      sx={{
+        backgroundColor: "#4a90e2",
+        color: "#ffffff",
+        py: 4,
+        textAlign: "center",
+      }}
     >
-      <div className="container">
-        <p>
-          &copy; {new Date().getFullYear()} Jose David Gonzalez. Todos los
-          derechos reservados.
-        </p>
-        <p>
-          <a href="#" className="text-light">
+      <Container>
+        <Typography variant="body1">
+          &copy; {new Date().getFullYear()} Jose David Gonzalez. Todos los derechos reservados.
+        </Typography>
+        <Typography variant="body2">
+          <Link href="#" color="inherit" underline="hover">
             Política de Privacidad
-          </a>{" "}
-          |{" "}
-          <a href="#" className="text-light">
+          </Link>
+          {" | "}
+          <Link href="#" color="inherit" underline="hover">
             Términos de Servicio
-          </a>
-        </p>
-      </div>
-    </footer>
+          </Link>
+        </Typography>
+      </Container>
+    </Box>
   );
 };
 

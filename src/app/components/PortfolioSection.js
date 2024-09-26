@@ -1,46 +1,72 @@
+// src/app/components/PortfolioSection.js
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+  Box,
+} from "@mui/material";
 
 const PortfolioSection = ({ portfolio }) => (
-  <div
-    className="card card-body "
-    style={{ backgroundColor: "#4a90e2", color: "#ffffff" }} // Color de fondo y texto
+  <Box
+    sx={{
+      backgroundColor: "#4a90e2",
+      color: "#ffffff",
+      padding: "20px",
+      objectFit: "cover",
+    }}
   >
-    <div className="row ">
-      <div className="col-md-12">
-        <h1 className="text-center text-light ">Portfolio</h1>
-      </div>
-
+    <Typography variant="h4" align="center" gutterBottom>
+      Portfolio
+    </Typography>
+    <Box display="flex" flexWrap="wrap" justifyContent="space-between">
       {portfolio.map((project, index) => (
-        <div className="col-md-4 p-2" key={index}>
-          <div className="card h-100 ">
-            <div className="overflow">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={180}
-                height={180}
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-            <div className="card-body">
-              <h3 className="text-title">{project.title}</h3>
-              <p className="text-description">{project.description}</p>
-              <Link href="#" className="btn btn-outline-secondary">
+        <Card key={index} sx={{ width: "100%", maxWidth: 300, margin: 2 }}>
+          <CardMedia
+            component="div"
+            sx={{
+              position: "relative",
+              height: 180,
+              overflow: "hidden",
+              
+            }}
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" // Ajusta los tamaños según tus necesidades
+              priority
+            />
+          </CardMedia>
+          <CardContent>
+            <Typography variant="h6">{project.title}</Typography>
+            <Typography variant="body2">{project.description}</Typography>
+            <Link href="#" passHref>
+              <Button
+                variant="outlined"
+                color="secondary"
+                sx={{ marginTop: 1 }}
+              >
                 Know More
-              </Link>
-            </div>
-          </div>
-        </div>
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
       ))}
-    </div>
-    <div className="col-md-12 ">
-      <Link href="/portfolio" className="btn btn-outline-light mt-2 ">
-        Mas Proyectos
+    </Box>
+    <Box display="flex" justifyContent="center" mt={2}>
+      <Link href="/portfolio" passHref>
+        <Button variant="outlined" color="inherit" sx={{ color: "white" }}>
+          Mas Proyectos
+        </Button>
       </Link>
-    </div>
-  </div>
+    </Box>
+  </Box>
 );
 
 export default PortfolioSection;

@@ -1,11 +1,12 @@
 // src/app/not-found.js
 import Link from 'next/link'; // Importa el componente Link de Next.js
 import Image from 'next/image'; // Importa el componente Image de Next.js
+import { Box, Typography, Button } from '@mui/material'; // Importa componentes de Material-UI
 
 export default function NotFound() {
   return (
-    <div style={{ textAlign: 'center', padding: '50px' }}>
-      <h1>404 - Página no encontrada</h1>
+    <Box sx={{ textAlign: 'center', padding: '50px' }}>
+      <Typography variant="h1">404 - Página no encontrada</Typography>
       <Image
         src="/404.jpg" // Ruta a tu imagen 404
         alt="Error 404"
@@ -14,12 +15,14 @@ export default function NotFound() {
         style={{ minWidth: '70%', height: 'auto' }} // Estilo para que la imagen sea responsiva
         priority // Este atributo es útil si la imagen es importante para el contenido
       />
-      <p>Lo sentimos, no encontramos la página que estás buscando.</p>
+      <Typography variant="body1" sx={{ marginTop: '20px' }}>
+        Lo sentimos, no encontramos la página que estás buscando.
+      </Typography>
       <Link href="/" passHref>
-        <button style={{ padding: '10px 20px', marginTop: '20px' }}>
+        <Button variant="contained" color="primary" sx={{ marginTop: '20px' }}>
           Volver al Inicio
-        </button>
+        </Button>
       </Link>
-    </div>
+    </Box>
   );
 }

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import { Card, CardContent, Typography, Slider, Box } from "@mui/material";
 
 const SkillsSection = ({ skills }) => {
   // Crea un estado para cada skill que se actualizará cuando el usuario cambie el valor del rango
@@ -15,35 +16,32 @@ const SkillsSection = ({ skills }) => {
   };
 
   return (
-    <div className="col-md-6">
-      <div
-        className="card bg-light mb-3 w-100 d-flex align-items-stretch"
-        style={{ minHeight: "400px" }}
-      >
-        <div className="card-body">
-          <h1 className="card-title fw-bold">Skills</h1>
+    <Box sx={{ flex: 1, mb: 3 }}>
+      <Card variant="outlined" sx={{ minHeight: "400px", bgcolor: 'background.paper' }}>
+        <CardContent>
+          <Typography variant="h5" component="h2" gutterBottom>
+            Skills
+          </Typography>
           {skills.map((item, index) => (
-            <div key={index} className="mb-4">
-              <h6>{item.skill}</h6>
+            <Box key={index} sx={{ mb: 1 }}>
+              <Typography variant="subtitle1">{item.skill}</Typography>
               {/* Rango de habilidad ajustable */}
-              <input
-                type="range"
-                className="form-range"
-                min="0"
-                max="100"
+              <Slider
                 value={skillLevels[index]} // Usa el valor actual del estado
-                onChange={(e) => handleRangeChange(index, e.target.value)} // Manejador de cambio
-                aria-valuenow={skillLevels[index]}
-                aria-valuemin="0"
-                aria-valuemax="100"
+                onChange={(e, newValue) => handleRangeChange(index, newValue)} // Manejador de cambio
+                aria-labelledby={`slider-${index}`}
+                min={0}
+                max={100}
               />
               {/* Mostrar el valor del porcentaje */}
-              <small className="text-muted">{skillLevels[index]}%</small>
-            </div>
+              <Typography variant="caption" color="text.secondary">
+                {skillLevels[index]}%
+              </Typography>
+            </Box>
           ))}
-        </div>
-      </div>
-    </div>
+        </CardContent>
+      </Card>
+    </Box>
   );
 };
 

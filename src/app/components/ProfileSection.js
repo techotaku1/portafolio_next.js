@@ -1,32 +1,44 @@
-import Image from "next/image";
+// src/components/ProfileSection.js
 import Link from "next/link";
+import { Container, Typography, Button } from "@mui/material"; // Importar componentes de Material-UI
+import Avatar from "@mui/material/Avatar"; // Importar Avatar para la imagen de perfil
 
 const ProfileSection = () => (
-  <div
-    className="container d-flex align-items-center text-white py-3 mb-3"
-    style={{ backgroundColor: "#4a90e2", color: "#ffffff" }} // Color de fondo y texto
+  <Container
+    sx={{
+      display: 'flex',
+      alignItems: 'center',
+      backgroundColor: '#4a90e2',
+      color: '#ffffff',
+      py: 3,
+      mb: 3,
+    }}
   >
-    <Image
-      src="/mi-imagen2.jpg"
+    <Avatar
       alt="Foto de perfil"
-      width={140}
-      height={140}
-      className="me-4 rounded"
-      priority
+      src="/mi-imagen2.jpg"
+      sx={{ width: 140, height: 140, marginRight: 2,  }} // Estilo del Avatar
     />
     <div>
-      <h1 className="h3 mb-1 fw-bold">Jose David Gonzalez</h1>
-      <h2 className="h5">Programador FULL STACK</h2>
-      <p className="mt-3">
+      <Typography variant="h5" component="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
+        Jose David Gonzalez
+      </Typography>
+      <Typography variant="h6" component="h2">
+        Programador FULL STACK
+      </Typography>
+      <Typography variant="body1" sx={{ marginTop: 2 }}>
         Soy un apasionado desarrollador con experiencia en tecnologías frontend
         y backend. Me especializo en React, Next.js y Python para crear
         aplicaciones modernas y eficientes.
-      </p>
-      <Link href="/hireme" className="btn btn-outline-light mb-3">
-        Contratarme
+      </Typography>
+      <Link href="/hireme" style={{ textDecoration: 'none' }}>
+      <Button variant="outlined" color="inherit" sx={{ color: "white", marginTop: 2 }}>
+  Mas Proyectos
+</Button>
+
       </Link>
     </div>
-  </div>
+  </Container>
 );
 
 export default ProfileSection;

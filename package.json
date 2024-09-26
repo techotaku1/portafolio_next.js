@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@eslint/config-array": "^0.18.0",
     "@eslint/object-schema": "^2.1.4",
+    "@mui/material": "^6.1.1",
+    "@mui/material-nextjs": "^6.1.1",
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
     "glob": "^11.0.0",

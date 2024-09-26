@@ -1,63 +1,53 @@
+// src/components/Navbar.js
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav
-      className="navbar navbar-expand-lg mb-3"
-      style={{ backgroundColor: "#4a90e2", color: "#ffffff" }} // Color de fondo y texto
-    >
-      <div className="container">
-        {/* Título o marca del portfolio */}
-        <Link href="/" className="navbar-brand" style={{ color: "#ffffff" }}>
-          Portfolio
-        </Link>
+    <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        {/* Título a la izquierda con margen */}
+        <Typography variant="h6" sx={{ color: "#ffffff", ml: 4 }}> {/* Ajusta el margen izquierdo aquí */}
+          <Link href="/" style={{ color: "#ffffff", textDecoration: 'none' }}>
+            Portfolio
+          </Link>
+        </Typography>
 
-        {/* Botón para colapsar el menú en pantallas pequeñas */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        {/* Links de navegación */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto d-flex align-items-center">
-            <li className="nav-item">
-              <Link
-                href="/dashboard/blog"
-                className={`nav-link ${
-                  pathname === "/dashboard/blog" ? "active" : ""
-                }`}
-                style={{ color: "#ffffff" }} // Color del texto en el link
-              >
-                Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                href="/dashboard/github"
-                className={`nav-link ${
-                  pathname === "/dashboard/github" ? "active" : ""
-                }`}
-                style={{ color: "#ffffff" }} // Color del texto en el link
-              >
-                GitHub
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        {/* Botones a la derecha con margen */}
+        <Box sx={{ display: 'flex', gap: 2, mr: 4 }}> {/* Ajusta el margen derecho aquí */}
+          <Link href="/dashboard/blog">
+            <Button 
+              color={pathname === "/dashboard/blog" ? "inherit" : "default"} 
+              sx={{ 
+                color: "#ffffff", 
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.2)', // Efecto hover
+                }
+              }}
+            >
+              Blog
+            </Button>
+          </Link>
+          <Link href="/dashboard/github">
+            <Button 
+              color={pathname === "/dashboard/github" ? "inherit" : "default"} 
+              sx={{ 
+                color: "#ffffff", 
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.2)', // Efecto hover
+                }
+              }}
+            >
+              GitHub
+            </Button>
+          </Link>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 

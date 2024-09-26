@@ -1,24 +1,27 @@
 // src/app/components/ExperienceSection.js
+import { Card, CardContent, Typography, Box } from "@mui/material";
+
 const ExperienceSection = ({ experience }) => (
-  <div className="col-md-6">
-    <div
-      className="card bg-light mb-3 w-100 d-flex align-items-stretch"
-      style={{ minHeight: "400px" }}
-    >
-      <div className="card-body">
-        <h1 className="card-title fw-bold">Experiencia</h1>
+  <Box flex={1} mb={3} display="flex" justifyContent="center" alignItems="stretch">
+    <Card variant="outlined" sx={{ width: '100%', minHeight: '400px' }}>
+      <CardContent>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Experiencia
+        </Typography>
         <ul>
           {experience.map((item, index) => (
-            <li key={index} className="my-1">
-              <h3>{item.title}</h3>
-              <h5>{item.company}</h5>
-              <p>{item.description}</p>
+            <li key={index} style={{ marginBottom: '10px' }}>
+              <Typography variant="h6">{item.title}</Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                {item.company}
+              </Typography>
+              <Typography variant="body2">{item.description}</Typography>
             </li>
           ))}
         </ul>
-      </div>
-    </div>
-  </div>
+      </CardContent>
+    </Card>
+  </Box>
 );
 
 export default ExperienceSection;

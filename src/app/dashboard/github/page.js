@@ -1,6 +1,7 @@
-'use client'; 
+'use client';
 import React, { useEffect, useState } from 'react';
 import Loading from './loading'; // Importa el componente de carga
+import { Box, Card, CardHeader, CardContent, Typography, Button, Avatar } from '@mui/material';
 
 export default function GitHub() {
   const [profile, setProfile] = useState(null);
@@ -35,50 +36,75 @@ export default function GitHub() {
 
   if (error) {
     return (
-      <div className="alert alert-danger" role="alert">
-        {error}
-      </div>
+      <Box sx={{ textAlign: 'center', mt: 2}}>
+        <Typography variant="h6" color="error">
+          {error}
+        </Typography>
+      </Box>
     );
   }
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-8">
-          <div className="card border">
-            <div className="card-header text-center" style={{ backgroundColor: '#4a9', color: 'white' }}>
-              <h1>Mi GitHub</h1>
-            </div>
-            <div className="card-body text-center">
-              {profile && (
-                <div>
-                  <img
-                    src={profile.avatar_url}
-                    alt={profile.name}
-                    className="rounded-circle border border-primary"
-                    style={{ width: "150px", height: "150px", objectFit: "cover" }}
-                  />
-                  <h2 className="mt-3">{profile.name}</h2>
-                  <p className="text-muted">{profile.bio || "No hay biografía disponible"}</p>
-                  <p><strong>Ubicación:</strong> {profile.location || "No especificada"}</p>
-                  <p><strong>Repositorios públicos:</strong> {profile.public_repos}</p>
-                  <p><strong>Seguidores:</strong> {profile.followers}</p>
-                  <p><strong>Siguiendo:</strong> {profile.following}</p>
-                  <a
-                    href={profile.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-light mt-3"
-                    style={{ backgroundColor: '#4a9', color: 'white', borderColor: '#4a90e2' }}
-                  >
-                    Visitar mi perfil en GitHub
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box className="container" sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+      <Card variant="outlined" sx={{ maxWidth: 600, textAlign: 'center' }}>
+        <CardHeader
+          title="Mi GitHub"
+          sx={{
+            backgroundColor: '#4a90e2',
+            color: 'white',
+          }}
+        />
+        <CardContent>
+          {profile && (
+            <Box>
+              <Avatar
+                src={profile.avatar_url}
+                alt={profile.name}
+                sx={{
+                  width: 150,
+                  height: 150,
+                  margin: '0 auto',
+                  border: '3px solid #4a90e2',
+                }}
+              />
+              <Typography variant="h5" sx={{ mt: 2 }}>
+                {profile.name}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {profile.bio || "No hay biografía disponible"}
+              </Typography>
+              <Typography variant="body2">
+                <strong>Ubicación:</strong> {profile.location || "No especificada"}
+              </Typography>
+              <Typography variant="body2">
+                <strong>Repositorios públicos:</strong> {profile.public_repos}
+              </Typography>
+              <Typography variant="body2">
+                <strong>Seguidores:</strong> {profile.followers}
+              </Typography>
+              <Typography variant="body2">
+                <strong>Siguiendo:</strong> {profile.following}
+              </Typography>
+              <Button
+                variant="contained"
+                href={profile.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  mt: 3,
+                  backgroundColor: '#4a90e2',
+                  color: 'white',
+                  '&:hover': {
+                    backgroundColor: '#3a7cbe',
+                  },
+                }}
+              >
+                Visitar mi perfil en GitHub
+              </Button>
+            </Box>
+          )}
+        </CardContent>
+      </Card>
+    </Box>
   );
 }
