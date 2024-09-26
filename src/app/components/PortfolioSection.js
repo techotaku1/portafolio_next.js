@@ -1,4 +1,3 @@
-// src/app/components/PortfolioSection.js
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -26,12 +25,10 @@ const PortfolioSection = ({ portfolio }) => (
       {portfolio.map((project, index) => (
         <Card key={index} sx={{ width: "100%", maxWidth: 300, margin: 2 }}>
           <CardMedia
-            component="div"
             sx={{
               position: "relative",
               height: 180,
               overflow: "hidden",
-              
             }}
           >
             <Image
@@ -62,7 +59,7 @@ const PortfolioSection = ({ portfolio }) => (
     <Box display="flex" justifyContent="center" mt={2}>
       <Link href="/portfolio" passHref>
         <Button variant="outlined" color="inherit" sx={{ color: "white" }}>
-          Mas Proyectos
+          Más Proyectos
         </Button>
       </Link>
     </Box>

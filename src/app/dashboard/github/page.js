@@ -36,7 +36,7 @@ export default function GitHub() {
 
   if (error) {
     return (
-      <Box sx={{ textAlign: 'center', mt: 2}}>
+      <Box sx={{ textAlign: 'center', mt: 2 }}>
         <Typography variant="h6" color="error">
           {error}
         </Typography>
@@ -98,6 +98,7 @@ export default function GitHub() {
                     backgroundColor: '#3a7cbe',
                   },
                 }}
+                aria-label={`Visitar perfil de GitHub de ${profile.name}`} // Mejora de accesibilidad
               >
                 Visitar mi perfil en GitHub
               </Button>

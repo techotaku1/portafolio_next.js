@@ -1,7 +1,6 @@
-// src/components/ProfileSection.js
 import Link from "next/link";
-import { Container, Typography, Button } from "@mui/material"; // Importar componentes de Material-UI
-import Avatar from "@mui/material/Avatar"; // Importar Avatar para la imagen de perfil
+import { Container, Typography, Button, Box } from "@mui/material"; // Añadir Box para simplificar layout
+import Avatar from "@mui/material/Avatar"; 
 
 const ProfileSection = () => (
   <Container
@@ -17,9 +16,11 @@ const ProfileSection = () => (
     <Avatar
       alt="Foto de perfil"
       src="/mi-imagen2.jpg"
-      sx={{ width: 140, height: 140, marginRight: 2,  }} // Estilo del Avatar
+      sx={{ width: 140, height: 140 }} // Eliminamos marginRight, ya que se manejará con gap
     />
-    <div>
+    
+    {/* Usamos Box para controlar el layout interno */}
+    <Box sx={{ ml: 2 }}> 
       <Typography variant="h5" component="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
         Jose David Gonzalez
       </Typography>
@@ -28,16 +29,21 @@ const ProfileSection = () => (
       </Typography>
       <Typography variant="body1" sx={{ marginTop: 2 }}>
         Soy un apasionado desarrollador con experiencia en tecnologías frontend
-        y backend. Me especializo en React, Next.js y Python para crear
+        y backend. Me especializo en React, Next.js y Python con FastAPI para crear
         aplicaciones modernas y eficientes.
       </Typography>
-      <Link href="/hireme" style={{ textDecoration: 'none' }}>
-      <Button variant="outlined" color="inherit" sx={{ color: "white", marginTop: 2 }}>
-  Mas Proyectos
-</Button>
 
+      {/* Enlace con botón */}
+      <Link href="/hireme" style={{ textDecoration: 'none' }}>
+        <Button 
+          variant="outlined" 
+          color="inherit" 
+          sx={{ marginTop: 2, color: "white" }} // Eliminamos color, ya que `inherit` se hereda automáticamente
+        >
+          Más Proyectos
+        </Button>
       </Link>
-    </div>
+    </Box>
   </Container>
 );
 

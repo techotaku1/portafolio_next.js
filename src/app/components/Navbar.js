@@ -1,50 +1,75 @@
-// src/components/Navbar.js
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  Link as MuiLink,
+} from "@mui/material"; // Usamos el Link de Material-UI
+import Link from "next/link"; // Solo para navegación con Next.js
 
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        {/* Título a la izquierda con margen */}
-        <Typography variant="h6" sx={{ color: "#ffffff", ml: 4 }}> {/* Ajusta el margen izquierdo aquí */}
-          <Link href="/" style={{ color: "#ffffff", textDecoration: 'none' }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
+        {/* Título a la izquierda */}
+        <Typography variant="h6" sx={{ color: "common.white", ml: 4 }}>
+          <MuiLink component={Link} href="/" underline="none" color="inherit">
             Portfolio
-          </Link>
+          </MuiLink>
         </Typography>
 
-        {/* Botones a la derecha con margen */}
-        <Box sx={{ display: 'flex', gap: 2, mr: 4 }}> {/* Ajusta el margen derecho aquí */}
-          <Link href="/dashboard/blog">
-            <Button 
-              color={pathname === "/dashboard/blog" ? "inherit" : "default"} 
-              sx={{ 
-                color: "#ffffff", 
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)', // Efecto hover
-                }
+        {/* Botones de navegación a la derecha */}
+        <Box sx={{ display: "flex", gap: 2, mr: 4 }}>
+          <MuiLink component={Link} href="/dashboard/blog" underline="none">
+            <Button
+              variant={pathname === "/dashboard/blog" ? "outlined" : "text"}
+              sx={{
+                color: "common.white",
+                borderColor: "common.white",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
+                },
               }}
             >
               Blog
             </Button>
-          </Link>
-          <Link href="/dashboard/github">
-            <Button 
-              color={pathname === "/dashboard/github" ? "inherit" : "default"} 
-              sx={{ 
-                color: "#ffffff", 
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)', // Efecto hover
-                }
+          </MuiLink>
+
+          <MuiLink component={Link} href="/dashboard/github" underline="none">
+            <Button
+              variant={pathname === "/dashboard/github" ? "outlined" : "text"}
+              sx={{
+                color: "common.white",
+                borderColor: "common.white",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
+                },
               }}
             >
               GitHub
             </Button>
-          </Link>
+          </MuiLink>
+
+          {/* Nuevo botón DOC */}
+          <MuiLink component={Link} href="/dashboard/doc" underline="none">
+            <Button
+              variant={pathname === "/dashboard/doc" ? "outlined" : "text"}
+              sx={{
+                color: "common.white",
+                borderColor: "common.white",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
+                },
+              }}
+            >
+              DOC
+            </Button>
+          </MuiLink>
         </Box>
       </Toolbar>
     </AppBar>

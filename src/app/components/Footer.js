@@ -1,4 +1,3 @@
-// src/app/components/Footer.js
 import { Box, Container, Typography, Link } from '@mui/material';
 
 const Footer = () => {
@@ -16,12 +15,12 @@ const Footer = () => {
         <Typography variant="body1">
           &copy; {new Date().getFullYear()} Jose David Gonzalez. Todos los derechos reservados.
         </Typography>
-        <Typography variant="body2">
-          <Link href="#" color="inherit" underline="hover">
+        <Typography variant="body2" sx={{ mt: 1 }}>
+          <Link href="#" color="inherit" underline="hover" sx={{ mx: 0.5 }}>
             Política de Privacidad
           </Link>
           {" | "}
-          <Link href="#" color="inherit" underline="hover">
+          <Link href="#" color="inherit" underline="hover" sx={{ mx: 0.5 }}>
             Términos de Servicio
           </Link>
         </Typography>
