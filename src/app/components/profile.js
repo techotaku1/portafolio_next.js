@@ -9,16 +9,20 @@ export const skills = [
 export const experience = [
   {
     title: "Desarrollador Frontend",
-    from: "2022-2024",
+   
     description: "Desarrollé aplicaciones web utilizando React y Next.js.",
   },
   {
     title: "Desarrollador Backend",
-    from: "2022-2024",
+    
     description: "Creé APIs REST-CRUD utilizando Python y FastAPI.",
   },
- 
- 
+  {
+    title: "Bases De Datos",
+    
+    description: "Conecte una base de datos con una API-REST con el servicio en la nube de AWS",
+  },
+
 ];
 
 export const portfolio = [

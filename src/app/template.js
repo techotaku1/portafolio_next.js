@@ -12,18 +12,26 @@ import { Container, Box } from "@mui/material";
 
 export default function Template({ children }) {
   const pathname = usePathname();
-  const hideFooterRoutes = ["/dashboard/blog", "/dashboard/github"];
   
+  // Rutas donde se ocultará el footer
+  const hideFooterRoutes = ["/dashboard/blog", "/dashboard/github"];
+
   return (
     <AppRouterCacheProvider options={{ enableCssLayer: true }}>
       <ThemeProvider theme={theme}>
+        {/* CssBaseline para una base de estilos consistente */}
         <CssBaseline />
+
+        {/* Componente para manejar eventos de navegación */}
         <NavigationEvents />
+
+        {/* Barra de navegación */}
         <Navbar />
 
+        {/* Contenedor principal responsivo */}
         <Box
           sx={{
-            p: { xs: 2, sm: 4, md: 6 },
+            p: { xs: 2, sm: 4, md: 6 }, // Padding responsivo
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-start',
@@ -41,14 +49,16 @@ export default function Template({ children }) {
               alignItems: 'center',
             }}
           >
+            {/* Contenido del componente hijo */}
             <Box sx={{ flex: 1, width: '100%', mb: { xs: 2, sm: 0 } }}>
               {children}
             </Box>
           </Container>
         </Box>
-        
+
+        {/* Condicional para mostrar el Footer */}
         {!hideFooterRoutes.includes(pathname) && <Footer />}
       </ThemeProvider>
     </AppRouterCacheProvider>
   );
-} 
+}

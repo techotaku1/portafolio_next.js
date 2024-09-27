@@ -8,6 +8,9 @@ const PortfolioSection = ({ portfolio }) => (
       p: 3, 
       backgroundColor: "#4a90e2", 
       color: "#ffffff", 
+      boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)', // Sombra agregada
+        borderRadius: '10px', // Opcional: para redondear ligeramente los bordes del contenedor principal
+        padding: 3,
     }}
   >
     <Typography variant="h4" align="center" gutterBottom>

@@ -30,22 +30,12 @@ const Page = () => (
         }}
       >
         {/* Contenedor para Skills */}
-        <Box
-          sx={{
-            flex: 1,
-            width: "100%", // En pantallas pequeñas es 100%, controlado por flex en pantallas grandes
-          }}
-        >
+        <Box sx={{ flex: 1 }}>
           <SkillsSection skills={skills} />
         </Box>
 
         {/* Contenedor para Experience */}
-        <Box
-          sx={{
-            flex: 1,
-            width: "100%", // Lo mismo, el flex ajusta el tamaño
-          }}
-        >
+        <Box sx={{ flex: 1 }}>
           <ExperienceSection experience={experience} />
         </Box>
       </Box>

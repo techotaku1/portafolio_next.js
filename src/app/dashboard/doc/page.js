@@ -124,7 +124,16 @@ const DocPage = () => {
           <Typography variant="body1" color="text.secondary">
             <strong>Comandos: para agregar commit</strong>
           </Typography>
-          <Box sx={{ bgcolor: "#f5f5f5", p: 2, borderRadius: "4px", mt: 1 }}>
+          <Box
+            sx={{
+              bgcolor: "#f5f5f5",
+              p: 2,
+              borderRadius: "4px",
+              mt: 1,
+              width: "100%", // Ajusta el ancho al 100%
+              overflow: "auto", // Permite el scroll en caso de desbordamiento
+            }}
+          >
             <pre>
               <code>
                 {`git add .\n` +
@@ -133,11 +142,16 @@ const DocPage = () => {
               </code>
             </pre>
           </Box>
-          <Button variant="contained" color="primary" onClick={handleCopy} sx={{ mt: 2 }}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleCopy}
+            sx={{ mt: 2 }}
+          >
             Copiar al portapapeles
           </Button>
           {copySuccess && (
-            <Typography variant="body2" color="success.main" sx={{ mt: 2}}>
+            <Typography variant="body2" color="success.main" sx={{ mt: 2 }}>
               {copySuccess}
             </Typography>
           )}
