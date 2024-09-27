@@ -1,6 +1,7 @@
 // app/layout.js
 
 export const metadata = {
+  metadataBase: new URL('https://mi-portafolio.com'), // Agrega esta línea
   title: 'Portafolio de José David González',
   description: 'Desarrollador de software especializado en React, Next.js y FastAPI.',
   openGraph: {
@@ -17,14 +18,9 @@ export const metadata = {
     ],
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@tu_usuario',
-    title: 'Portafolio de José David González',
-    description: 'Desarrollador de software especializado en React, Next.js y FastAPI.',
-    image: '/images/og-image.png',
-  },
+ 
 };
+
 
 export default function RootLayout({ children }) {
   const jsonLd = {

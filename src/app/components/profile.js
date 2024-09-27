@@ -3,60 +3,54 @@ export const skills = [
   { skill: "Next.js", percentage: 70 },
   { skill: "Javascript", percentage: 90 },
   { skill: "Python", percentage: 90 },
-  { skill: "FastAPI", percentage: 70 }
+  { skill: "FastAPI", percentage: 70 },
 ];
 
 export const experience = [
   {
     title: "Desarrollador Frontend",
-   
+
     description: "Desarrollé aplicaciones web utilizando React y Next.js.",
   },
   {
     title: "Desarrollador Backend",
-    
+
     description: "Creé APIs REST-CRUD utilizando Python y FastAPI.",
   },
   {
     title: "Bases De Datos",
-    
-    description: "Conecte una base de datos con una API-REST con el servicio en la nube de AWS",
-  },
 
+    description:
+      "Conecte una base de datos con una API-REST con el servicio en la nube de AWS",
+  },
+  {
+    title: "Editor de Videos",
+    description:
+      "Tengo experiencia en la edición de videos utilizando CapCut y Canva.",
+  },
 ];
 
 export const portfolio = [
   {
-    title: "Proyecto 1",
-    description: "Descripción del proyecto 1.",
-    image: "/portfolio1.jpeg", // Ruta de la imagen
+    title: "Proyecto CRUD con FastAPI",
+    description:
+      "Implemente una API-REST con PYTHON y conexión a base de datos SQLite.",
+    image: "/fast_api_ppt.png",
+    repo: "https://github.com/techotaku1/api_rest_crud_fastapi", // URL del repositorio
   },
   {
-    title: "Proyecto 2",
-    description: "Descripción del proyecto 2.",
-    image: "/portfolio2.jpg", // Ruta de la imagen
+    title: "Proyecto CRUD en AWS",
+    description: "Implementé un CRUD usando FastAPI, AWS y Python.",
+    image: "/fastapi-aws.webp",
+    repo: "https://github.com/techotaku1/api_rest_crud_fastcrud", // URL del repositorio
   },
   {
-    title: "Proyecto 3",
-    description: "Descripción del proyecto 3.",
-    image: "/portfolio3.png", // Ruta de la imagen
+    title: "Portafolio en Next.js",
+    description:
+      "Portafolio personal con manejo de API de GitHub y navegacion de eventos.",
+    image: "/proyectonextjs.jpg",
+    repo: "https://github.com/techotaku1/portafolio_next.js", // URL del repositorio
   },
-  {
-    title: "Proyecto 4",
-    description: "Descripción del proyecto 4.",
-    image: "/portfolio4.png", // Ruta de la imagen
-  },
-  {
-    title: "Proyecto 5",
-    description: "Descripción del proyecto 5.",
-    image: "/portfolio5.jpeg", // Ruta de la imagen
-  },
-  {
-    title: "Proyecto 6",
-    description: "Descripción del proyecto 6.",
-    image: "/portfolio6.jpeg", // Ruta de la imagen
-  },
-  // Agrega más proyectos aquí
 ];
 
 const BlogItems = [
@@ -64,26 +58,26 @@ const BlogItems = [
     id: 1,
     title: "GATSBY",
     icon: "/gatsby.png", // Cambia por la ruta correcta de tu icono
-    link: "https://gatsbyjs.com/docs/" // Cambia por la URL que desees
+    link: "https://gatsbyjs.com/docs/", // Cambia por la URL que desees
   },
   {
     id: 2,
     title: "NEXT.JS",
     icon: "/nextjs.png",
-    link: "https://nextjs.org/docs"
+    link: "https://nextjs.org/docs",
   },
   {
     id: 3,
     title: "EXPRESS",
     icon: "/express.png",
-    link: "https://expressjs.com/es"
+    link: "https://expressjs.com/es",
   },
   {
     id: 4,
     title: "DJANGO",
     icon: "/django.png",
-    link: "https://docs.djangoproject.com"
-  }
+    link: "https://docs.djangoproject.com",
+  },
 ];
 
 export default BlogItems;

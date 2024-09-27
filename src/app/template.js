@@ -9,6 +9,8 @@ import Footer from "@/app/components/Footer";
 import NavigationEvents from "@/app/components/navigation-events";
 import { usePathname } from "next/navigation";
 import { Container, Box } from "@mui/material";
+import { Suspense } from 'react';
+
 
 export default function Template({ children }) {
   const pathname = usePathname();
@@ -23,7 +25,11 @@ export default function Template({ children }) {
         <CssBaseline />
 
         {/* Componente para manejar eventos de navegación */}
+        <Suspense fallback={<div>Cargando...</div>}>
+
         <NavigationEvents />
+        </Suspense>
+
 
         {/* Barra de navegación */}
         <Navbar />
