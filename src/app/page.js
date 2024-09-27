@@ -20,20 +20,32 @@ const Page = () => (
 
       {/* Box principal para Skills y Experience */}
       <Box
-        display="flex"
         sx={{
           mb: 5,
           mt: 5,
-          width: '100%', // Asegúrate de que ocupe el 100% del ancho disponible
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" }, // Apilado en xs, lado a lado en md+
+          width: "100%", // Ancho completo
+          gap: { xs: 2, md: 4 }, // Espacio entre columnas
         }}
       >
         {/* Contenedor para Skills */}
-        <Box sx={{ flex: 1, width: "50%", mr: 1 }}> {/* Ocupa la mitad de la página */}
+        <Box
+          sx={{
+            flex: 1,
+            width: "100%", // En pantallas pequeñas es 100%, controlado por flex en pantallas grandes
+          }}
+        >
           <SkillsSection skills={skills} />
         </Box>
 
         {/* Contenedor para Experience */}
-        <Box sx={{ flex: 1, width: "50%", ml: 1 }}> {/* Ocupa la mitad de la página */}
+        <Box
+          sx={{
+            flex: 1,
+            width: "100%", // Lo mismo, el flex ajusta el tamaño
+          }}
+        >
           <ExperienceSection experience={experience} />
         </Box>
       </Box>

@@ -13,31 +13,42 @@ import { Container, Box } from "@mui/material";
 export default function Template({ children }) {
   const pathname = usePathname();
   const hideFooterRoutes = ["/dashboard/blog", "/dashboard/github"];
-
+  
   return (
     <AppRouterCacheProvider options={{ enableCssLayer: true }}>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <NavigationEvents />
         <Navbar />
-        <CssBaseline />
-        {/* Box para ajustar padding externo */}
-        <Box sx={{ p: 6 }}> {/* Ajusta el valor de p para cambiar el padding externo */}
+
+        <Box
+          sx={{
+            p: { xs: 2, sm: 4, md: 6 },
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+          }}
+        >
           <Container
             maxWidth="lg"
             sx={{
-              boxShadow: 3, // Ajusta el nivel de sombra
-              borderRadius: 2, // Bordes redondeados
-              backgroundColor: "background.paper", // Color de fondo según el tema
-              p: 3, // Padding interno del contenedor
+              boxShadow: 3,
+              borderRadius: 2,
+              backgroundColor: "background.paper",
+              p: { xs: 2, sm: 3 }, // Ajuste responsivo del padding
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
           >
-            <Box>
+            <Box sx={{ flex: 1, width: '100%', mb: { xs: 2, sm: 0 } }}>
               {children}
             </Box>
           </Container>
         </Box>
+        
         {!hideFooterRoutes.includes(pathname) && <Footer />}
       </ThemeProvider>
     </AppRouterCacheProvider>
   );
-}
+} 

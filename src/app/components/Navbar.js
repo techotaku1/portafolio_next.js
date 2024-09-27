@@ -17,7 +17,7 @@ const Navbar = () => {
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Título a la izquierda */}
-        <Typography variant="h6" sx={{ color: "common.white", ml: 7}}>
+        <Typography variant="h6" sx={{ color: "common.white", ml: 7 }}>
           <MuiLink component={Link} href="/" underline="none" color="inherit">
             Portfolio
           </MuiLink>
@@ -25,51 +25,23 @@ const Navbar = () => {
 
         {/* Botones de navegación a la derecha */}
         <Box sx={{ display: "flex", gap: 2, mr: 7 }}>
-          <MuiLink component={Link} href="/dashboard/blog" underline="none">
-            <Button
-              variant={pathname === "/dashboard/blog" ? "outlined" : "text"}
-              sx={{
-                color: "common.white",
-                borderColor: "common.white",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
-                },
-              }}
-            >
-              Blog
-            </Button>
-          </MuiLink>
-
-          <MuiLink component={Link} href="/dashboard/github" underline="none">
-            <Button
-              variant={pathname === "/dashboard/github" ? "outlined" : "text"}
-              sx={{
-                color: "common.white",
-                borderColor: "common.white",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
-                },
-              }}
-            >
-              GitHub
-            </Button>
-          </MuiLink>
-
-          {/* Nuevo botón DOC */}
-          <MuiLink component={Link} href="/dashboard/doc" underline="none">
-            <Button
-              variant={pathname === "/dashboard/doc" ? "outlined" : "text"}
-              sx={{
-                color: "common.white",
-                borderColor: "common.white",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
-                },
-              }}
-            >
-              DOC
-            </Button>
-          </MuiLink>
+          {["/dashboard/blog", "/dashboard/github", "/dashboard/doc"].map((route, index) => (
+            <MuiLink key={index} component={Link} href={route} underline="none">
+              <Button
+                variant={pathname === route ? "outlined" : "text"}
+                sx={{
+                  color: "common.white",
+                  borderColor: "common.white",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
+                  },
+                  mx: 1, // Margen horizontal para espaciado uniforme
+                }}
+              >
+                {route.split("/").pop().toUpperCase()} {/* Nombre del botón dinámico */}
+              </Button>
+            </MuiLink>
+          ))}
         </Box>
       </Toolbar>
     </AppBar>
