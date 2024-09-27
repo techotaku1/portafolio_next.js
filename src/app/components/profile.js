@@ -1,5 +1,5 @@
 export const skills = [
-  { skill: "React", percentage: 80 },
+  { skill: "React", percentage: 70 },
   { skill: "Next.js", percentage: 70 },
   { skill: "Javascript", percentage: 90 },
   { skill: "Python", percentage: 90 },
@@ -17,6 +17,8 @@ export const experience = [
     from: "2022-2024",
     description: "Creé APIs REST-CRUD utilizando Python y FastAPI.",
   },
+ 
+ 
 ];
 
 export const portfolio = [

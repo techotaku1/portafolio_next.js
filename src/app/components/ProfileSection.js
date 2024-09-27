@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, Typography, Button, Box } from "@mui/material"; // Añadir Box para simplificar layout
+import { Container, Typography, Button, Box } from "@mui/material"; 
 import Avatar from "@mui/material/Avatar"; 
 
 const ProfileSection = () => (
@@ -10,17 +10,16 @@ const ProfileSection = () => (
       backgroundColor: '#4a90e2',
       color: '#ffffff',
       py: 3,
-      mb: 3,
+      gap: 2,
     }}
   >
     <Avatar
       alt="Foto de perfil"
       src="/mi-imagen2.jpg"
-      sx={{ width: 140, height: 140 }} // Eliminamos marginRight, ya que se manejará con gap
+      sx={{ width: 140, height: 140 }}
     />
     
-    {/* Usamos Box para controlar el layout interno */}
-    <Box sx={{ ml: 2 }}> 
+    <Box>
       <Typography variant="h5" component="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
         Jose David Gonzalez
       </Typography>
@@ -33,12 +32,10 @@ const ProfileSection = () => (
         aplicaciones modernas y eficientes.
       </Typography>
 
-      {/* Enlace con botón */}
       <Link href="/hireme" style={{ textDecoration: 'none' }}>
         <Button 
           variant="outlined" 
-          color="inherit" 
-          sx={{ marginTop: 2, color: "white" }} // Eliminamos color, ya que `inherit` se hereda automáticamente
+          sx={{ marginTop: 2, color: "white" }}
         >
           Más Proyectos
         </Button>

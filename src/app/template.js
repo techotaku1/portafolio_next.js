@@ -1,53 +1,41 @@
 "use client";
-
 import * as React from "react";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import theme from "@/theme"; // Importar el tema oficial
+import theme from "@/theme";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import NavigationEvents from "@/app/components/navigation-events"; // Asegúrate de que la ruta sea correcta
-import { usePathname } from "next/navigation"; // Hook para obtener la ruta actual
-import { Suspense } from "react";
-import { Container, Box } from "@mui/material"; // Importar componentes de Material-UI
+import NavigationEvents from "@/app/components/navigation-events";
+import { usePathname } from "next/navigation";
+import { Container, Box } from "@mui/material";
 
 export default function Template({ children }) {
-  const pathname = usePathname(); // Obtenemos la ruta actual
-
-  // Definimos las rutas en las que NO queremos mostrar el footer
+  const pathname = usePathname();
   const hideFooterRoutes = ["/dashboard/blog", "/dashboard/github"];
 
   return (
     <AppRouterCacheProvider options={{ enableCssLayer: true }}>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline para establecer estilos básicos consistentes */}
-        <CssBaseline />
-        
-        {/* Eventos de navegación para manejar la barra de progreso */}
-        <Suspense fallback={<p>Cargando eventos de navegación...</p>}>
-          <NavigationEvents />
-        </Suspense>
-
-        {/* Barra de navegación */}
+        <NavigationEvents />
         <Navbar />
-
-        {/* Sección principal usando Material-UI */}
-        <Box sx={{ mx: 6 }}>
+        <CssBaseline />
+        {/* Box para ajustar padding externo */}
+        <Box sx={{ p: 6 }}> {/* Ajusta el valor de p para cambiar el padding externo */}
           <Container
+            maxWidth="lg"
             sx={{
-              my: 3,
-              p: 3,
-              bgcolor: "background.paper",
-              borderRadius: 2,
-              boxShadow: 3,
+              boxShadow: 3, // Ajusta el nivel de sombra
+              borderRadius: 2, // Bordes redondeados
+              backgroundColor: "background.paper", // Color de fondo según el tema
+              p: 3, // Padding interno del contenedor
             }}
           >
-            {children}
+            <Box>
+              {children}
+            </Box>
           </Container>
         </Box>
-
-        {/* Mostramos el footer solo si la ruta actual no está en las rutas donde queremos ocultarlo */}
         {!hideFooterRoutes.includes(pathname) && <Footer />}
       </ThemeProvider>
     </AppRouterCacheProvider>

@@ -17,14 +17,14 @@ const Navbar = () => {
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Título a la izquierda */}
-        <Typography variant="h6" sx={{ color: "common.white", ml: 4 }}>
+        <Typography variant="h6" sx={{ color: "common.white", ml: 7}}>
           <MuiLink component={Link} href="/" underline="none" color="inherit">
             Portfolio
           </MuiLink>
         </Typography>
 
         {/* Botones de navegación a la derecha */}
-        <Box sx={{ display: "flex", gap: 2, mr: 4 }}>
+        <Box sx={{ display: "flex", gap: 2, mr: 7 }}>
           <MuiLink component={Link} href="/dashboard/blog" underline="none">
             <Button
               variant={pathname === "/dashboard/blog" ? "outlined" : "text"}

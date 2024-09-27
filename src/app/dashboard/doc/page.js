@@ -122,7 +122,7 @@ const DocPage = () => {
         {/* Código de Control de Versiones */}
         <Section title="5. Código de Control de Versiones" bgcolor="#fff54f">
           <Typography variant="body1" color="text.secondary">
-            <strong>Comandos:</strong>
+            <strong>Comandos: para agregar commit</strong>
           </Typography>
           <Box sx={{ bgcolor: "#f5f5f5", p: 2, borderRadius: "4px", mt: 1 }}>
             <pre>
@@ -137,7 +137,7 @@ const DocPage = () => {
             Copiar al portapapeles
           </Button>
           {copySuccess && (
-            <Typography variant="body2" color="success.main" sx={{ mt: 1 }}>
+            <Typography variant="body2" color="success.main" sx={{ mt: 2}}>
               {copySuccess}
             </Typography>
           )}

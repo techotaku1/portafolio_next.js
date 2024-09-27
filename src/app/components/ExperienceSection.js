@@ -1,25 +1,22 @@
-import { Card, CardContent, Typography, Box } from "@mui/material";
+import { Card, CardContent, Typography, Box, Stack } from "@mui/material";
 
 const ExperienceSection = ({ experience }) => (
-  <Box
-    flex={1}
-    mb={3}
-    display="flex"
-    justifyContent="center"
-    alignItems="stretch"
+  <Card
+    variant="outlined"
+    sx={{
+      height: "100%", // Asegúrate de que ocupe todo el alto del contenedor
+      display: "flex", // Usa flex para que ocupe todo el espacio disponible
+      flexDirection: "column",
+      p: 3
+    }}
   >
-    <Card variant="outlined" sx={{ width: "100%", minHeight: "400px" }}>
-      <CardContent>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          sx={{ fontWeight: "bold" }} // Aplica negrita al texto
-        >
-          Experiencia
-        </Typography>
+    <CardContent sx={{ flexGrow: 1 }}>
+      <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: "bold" }}>
+        Experiencia
+      </Typography>
+      <Stack spacing={2}>
         {experience.map((item, index) => (
-          <Box key={index} sx={{ mb: 2 }}>
+          <Box key={index}>
             <Typography variant="h6">{item.title}</Typography>
             <Typography variant="subtitle1" color="textSecondary">
               {item.company}
@@ -27,9 +24,9 @@ const ExperienceSection = ({ experience }) => (
             <Typography variant="body2">{item.description}</Typography>
           </Box>
         ))}
-      </CardContent>
-    </Card>
-  </Box>
+      </Stack>
+    </CardContent>
+  </Card>
 );
 
 export default ExperienceSection;
