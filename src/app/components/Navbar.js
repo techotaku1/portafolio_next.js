@@ -1,53 +1,56 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
-  Box,
-  Link as MuiLink,
-} from "@mui/material"; // Usamos el Link de Material-UI
-import Link from "next/link"; // Solo para navegación con Next.js
+  IconButton,
+  Drawer,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu"; // Importa el icono del menú
+import Link from "next/link";
+import DrawerButtons from "../dashboard/page"; // Importa el nuevo componente
 
 const Navbar = () => {
-  const pathname = usePathname();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === 'keydown' && 
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        {/* Título a la izquierda */}
-        <Typography variant="h6" sx={{ color: "common.white", ml: 2 }}>
-          <MuiLink component={Link} href="/" underline="none" color="inherit">
+        <Typography variant="h6" sx={{ color: "common.white", ml: 1 }}>
+          <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             Portfolio
-          </MuiLink>
+          </Link>
         </Typography>
 
-        {/* Botones de navegación a la derecha */}
-        <Box 
-          sx={{ 
-            display: { xs: 'block', sm: 'flex' }, // Cambia a bloque en pantallas pequeñas
-            gap: 2, 
-            mr: 2 
-          }}>
-          {["/dashboard/blog", "/dashboard/github", "/dashboard/doc"].map((route, index) => (
-            <MuiLink key={index} component={Link} href={route} underline="none">
-              <Button
-                variant={pathname === route ? "outlined" : "text"}
-                sx={{
-                  color: "common.white",
-                  borderColor: "common.white",
-                  "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
-                  },
-                  mx: 1, // Margen horizontal para espaciado uniforme
-                }}
-              >
-                {route.split("/").pop().toUpperCase()} {/* Nombre del botón dinámico */}
-              </Button>
-            </MuiLink>
-          ))}
-        </Box>
+        {/* IconButton para el menú en dispositivos móviles */}
+        <IconButton
+          edge="end"
+          color="inherit"
+          aria-label="menu"
+          onClick={toggleDrawer(true)}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        {/* Drawer para mostrar las opciones de navegación */}
+        <Drawer
+          anchor="right"
+          open={drawerOpen}
+          onClose={toggleDrawer(false)} // Se cierra al hacer clic fuera del Drawer
+        >
+          {/* Usar el componente DrawerButtons aquí */}
+          <DrawerButtons onClose={toggleDrawer(false)} />
+        </Drawer>
       </Toolbar>
     </AppBar>
   );

@@ -9,12 +9,11 @@ import Footer from "@/app/components/Footer";
 import NavigationEvents from "@/app/components/navigation-events";
 import { usePathname } from "next/navigation";
 import { Container, Box } from "@mui/material";
-import { Suspense } from 'react';
-
+import { Suspense } from "react";
 
 export default function Template({ children }) {
   const pathname = usePathname();
-  
+
   // Rutas donde se ocultará el footer
   const hideFooterRoutes = ["/dashboard/blog", "/dashboard/github"];
 
@@ -26,10 +25,8 @@ export default function Template({ children }) {
 
         {/* Componente para manejar eventos de navegación */}
         <Suspense fallback={<div>Cargando...</div>}>
-
-        <NavigationEvents />
+          <NavigationEvents />
         </Suspense>
-
 
         {/* Barra de navegación */}
         <Navbar />
@@ -38,9 +35,9 @@ export default function Template({ children }) {
         <Box
           sx={{
             p: { xs: 2, sm: 4, md: 6 }, // Padding responsivo
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
           }}
         >
           <Container
@@ -49,14 +46,16 @@ export default function Template({ children }) {
               boxShadow: 3,
               borderRadius: 2,
               backgroundColor: "background.paper",
-              p: { xs: 2, sm: 3 }, // Ajuste responsivo del padding
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              p: { xs: 2, sm: 3 },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%", // Asegúrate de que el contenedor ocupe el 100% del ancho
+              overflow: "hidden", // Evita el desbordamiento
             }}
           >
             {/* Contenido del componente hijo */}
-            <Box sx={{ flex: 1, width: '100%', mb: { xs: 2, sm: 0 } }}>
+            <Box sx={{ flex: 1, width: "100%", mb: { xs: 2, sm: 0 } }}>
               {children}
             </Box>
           </Container>
