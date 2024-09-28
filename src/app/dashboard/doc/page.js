@@ -188,6 +188,38 @@ const DocPage = () => {
             </Typography>
           )}
         </Section>
+
+        {/* Resumen sobre Estrategias de Renderizado */}
+        <Box sx={{ mt: 4 }}>
+          <Typography variant="h5" color="text.primary" fontWeight="bold">
+            Estrategias de Renderizado en Next.js
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            En Next.js, hay varias estrategias de renderizado que puedes utilizar, cada una adecuada para diferentes casos de uso:
+          </Typography>
+          <List>
+            <ListItem>
+              <Typography variant="body2" color="text.secondary">
+                <strong>SSR (Server-Side Rendering)</strong>: Ideal para contenido que cambia con frecuencia y necesita ser actualizado en cada solicitud. Permite obtener datos dinámicos en el servidor antes de renderizar la página.
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="body2" color="text.secondary">
+                <strong>SSG (Static Site Generation)</strong>: Perfecto para contenido estático o que se actualiza periódicamente. Genera páginas estáticas en el momento de la construcción, mejorando el rendimiento y SEO.
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="body2" color="text.secondary">
+                <strong>CSR (Client-Side Rendering)</strong>: Útil para componentes interactivos y en situaciones donde necesitas manejar el estado del cliente. Todo el contenido se carga en el cliente después de la primera solicitud.
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="body2" color="text.secondary">
+                <strong>ISR (Incremental Static Regeneration)</strong>: Combina lo mejor de SSR y SSG, permitiendo que las páginas estáticas se regeneren de forma incremental, ofreciendo contenido fresco sin necesidad de recompilar todo el sitio.
+              </Typography>
+            </ListItem>
+          </List>
+        </Box>
       </Paper>
     </Box>
   );
