@@ -1,4 +1,4 @@
-// dashboard/components/DrawerButtons.js
+// src/app/dashboard/components/DrawerButtons.js
 "use client";
 import { usePathname } from "next/navigation";
 import { Button, Box, Link as MuiLink } from "@mui/material";
