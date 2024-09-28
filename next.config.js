@@ -1,8 +1,7 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Exportación estática
-  trailingSlash: true, // Opcional: agregar una barra al final de las rutas
+  output: 'export', // Asegúrate de que este ajuste esté presente
+  distDir: 'out', // Puedes especificar la carpeta de salida aquí
 }
 
-module.exports = nextConfig; // Exporta la configuración usando CommonJS
+module.exports = nextConfig;
