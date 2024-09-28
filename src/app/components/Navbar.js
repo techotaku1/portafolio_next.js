@@ -17,7 +17,7 @@ import { useMediaQuery } from "@mui/material";
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const pathname = usePathname();
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("md")); // Determina si la pantalla es grande
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -33,22 +33,22 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
-      <Toolbar sx={{ justifyContent: "space-between", padding: "0 16px" }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         <Typography
           variant="h6"
           sx={{ 
             color: "common.white", 
-            ml: isLargeScreen ? 8 : 0 // Ajusta el margen izquierdo solo en pantallas grandes
+            ml: isLargeScreen ? 4 : 0, // Aplica margen solo en pantallas grandes
           }}
         >
-          <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link href="/" style={{ textDecoration: 'none', color: 'inherit'}}>
             Portfolio
           </Link>
         </Typography>
 
         {isLargeScreen ? (
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-            <Box sx={{ display: 'flex', ml: 'auto', mr: 6 }}>
+            <Box sx={{ display: 'flex', ml: 'auto', mr: 1 }}>
               {routes.map((route, index) => (
                 <Link key={index} href={route} style={{ textDecoration: 'none' }}>
                   <Button
@@ -57,7 +57,6 @@ const Navbar = () => {
                       color: "common.white",
                       borderColor: "common.white",
                       mx: 1,
-                      ml: isLargeScreen ? 2 : 0,
                       "&:hover": {
                         backgroundColor: "rgba(255, 255, 255, 0.2)", // Fondo blanco con opacidad al pasar el mouse
                       },
