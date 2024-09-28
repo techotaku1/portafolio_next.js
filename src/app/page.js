@@ -14,7 +14,8 @@ const Page = () => {
     <Container maxWidth="lg">
       <Box
         sx={{
-          my: 4,
+          mt:2,
+          mb:2,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

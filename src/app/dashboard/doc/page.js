@@ -22,7 +22,13 @@ const DocPage = () => {
   };
 
   return (
-    <Box sx={{ minHeight: "100vh", mt: 2, mb: 1 }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        mt: { xs: 3, sm: 4 }, // Margen superior para móviles
+        mb: { xs: -2, sm: 2 },
+      }}
+    >
       {/* Título principal */}
       <Paper
         elevation={3}

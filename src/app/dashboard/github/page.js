@@ -44,7 +44,7 @@ export default function GitHub() {
 
   if (error) {
     return (
-      <Box sx={{ textAlign: "center", mt: 2 }}>
+      <Box sx={{ textAlign: "center" }}>
         <Typography variant="h6" color="error">
           {error}
         </Typography>
@@ -55,17 +55,20 @@ export default function GitHub() {
   return (
     <Box
       className="container"
-      sx={{ display: "flex", justifyContent: "center" }}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        mt: { xs: 2, sm: 2 }, // Margen superior para móviles
+        mb: { xs: 1, sm: 2 }, // Margen inferior para móviles
+      }}
     >
       <Card
-  variant="outlined"
-  sx={{
-    maxWidth: 600,
-    textAlign: "center",
-    mt:2
-  }}
->
-
+        variant="outlined"
+        sx={{
+          maxWidth: 600,
+          textAlign: "center",
+        }}
+      >
         <CardHeader
           title="Mi GitHub"
           sx={{
@@ -111,7 +114,8 @@ export default function GitHub() {
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
-                  mt: 3,
+                  mt: 2, // Ajustar margen superior
+                  mb: 2, // Ajustar margen inferior del botón
                   backgroundColor: "#4a90e2",
                   color: "white",
                   "&:hover": {
