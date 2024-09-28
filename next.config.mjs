@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Indica que la salida debe ser estática
+  images: {
+    unoptimized: true, // Desactiva la optimización de imágenes
+  },
 };
 
 export default nextConfig;
