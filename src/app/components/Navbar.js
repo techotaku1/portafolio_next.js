@@ -1,4 +1,3 @@
-// Navbar.js
 "use client";
 import { useState } from "react";
 import {
@@ -10,15 +9,15 @@ import {
   Button,
   Box,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu"; // Importa el icono del menú
+import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Importar usePathname
-import { useMediaQuery } from "@mui/material"; // Importar useMediaQuery
+import { usePathname } from "next/navigation";
+import { useMediaQuery } from "@mui/material";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const pathname = usePathname(); // Obtener el pathname aquí
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("md")); // Determinar si es pantalla grande
+  const pathname = usePathname();
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -34,33 +33,43 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
-        <Typography variant="h6" sx={{ color: "common.white", ml: 1 }}>
+      <Toolbar sx={{ justifyContent: "space-between", padding: "0 16px" }}>
+        <Typography
+          variant="h6"
+          sx={{ 
+            color: "common.white", 
+            ml: isLargeScreen ? 8 : 0 // Ajusta el margen izquierdo solo en pantallas grandes
+          }}
+        >
           <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             Portfolio
           </Link>
         </Typography>
 
-        {/* Mostrar botones de navegación si es una pantalla grande */}
         {isLargeScreen ? (
-          <Box sx={{ display: 'flex' }}>
-            {routes.map((route, index) => (
-              <Link key={index} href={route} style={{ textDecoration: 'none' }}>
-                <Button
-                  variant={pathname === route ? "outlined" : "text"}
-                  sx={{
-                    color: "common.white",
-                    borderColor: "common.white",
-                    mx: 1, // Margen horizontal
-                  }}
-                >
-                  {route.split("/").pop().toUpperCase()}
-                </Button>
-              </Link>
-            ))}
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+            <Box sx={{ display: 'flex', ml: 'auto', mr: 6 }}>
+              {routes.map((route, index) => (
+                <Link key={index} href={route} style={{ textDecoration: 'none' }}>
+                  <Button
+                    variant={pathname === route ? "outlined" : "text"}
+                    sx={{
+                      color: "common.white",
+                      borderColor: "common.white",
+                      mx: 1,
+                      ml: isLargeScreen ? 2 : 0,
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.2)", // Fondo blanco con opacidad al pasar el mouse
+                      },
+                    }}
+                  >
+                    {route.split("/").pop().toUpperCase()}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
           </Box>
         ) : (
-          // IconButton para el menú en dispositivos móviles
           <IconButton
             edge="end"
             color="inherit"
@@ -71,18 +80,17 @@ const Navbar = () => {
           </IconButton>
         )}
 
-        {/* Drawer para mostrar las opciones de navegación */}
         <Drawer
           anchor="right"
           open={drawerOpen}
-          onClose={toggleDrawer(false)} // Se cierra al hacer clic fuera del Drawer
+          onClose={toggleDrawer(false)}
         >
           <Box 
             sx={{ 
               padding: 2, 
-              backgroundColor: "#4a90e2", // Fondo azul
-              height: '100%', // Asegura que ocupe toda la altura
-              color: 'white' // Texto blanco
+              backgroundColor: "#4a90e2",
+              height: '100%', 
+              color: 'white' 
             }}
           >
             {routes.map((route, index) => (
@@ -90,13 +98,13 @@ const Navbar = () => {
                 <Button
                   variant={pathname === route ? "outlined" : "text"}
                   sx={{
-                    color: "common.white", // Texto blanco
-                    borderColor: "common.white", // Borde blanco
-                    width: "100%", // Botón de ancho completo
+                    color: "common.white", 
+                    borderColor: "common.white", 
+                    width: "100%", 
                     "&:hover": {
-                      backgroundColor: "rgba(255, 255, 255, 0.2)", // Efecto hover
+                      backgroundColor: "rgba(255, 255, 255, 0.2)", 
                     },
-                    mb: 1, // Margen entre botones
+                    mb: 1, 
                   }}
                 >
                   {route.split("/").pop().toUpperCase()}

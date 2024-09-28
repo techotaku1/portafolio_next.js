@@ -50,6 +50,7 @@ const PortfolioSection = () => (
               src={image}
               alt={title}
               fill // Utiliza fill en lugar de layout
+              sizes="(max-width: 600px) 100vw, 300px" // Proporciona un tamaño responsivo
               style={{
                 objectFit: 'contain', // Ajusta la imagen sin recortar
                 display: 'block',
