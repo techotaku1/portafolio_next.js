@@ -1,4 +1,3 @@
-// src/app/not-found.js
 import Link from 'next/link'; // Importa el componente Link de Next.js
 import Image from 'next/image'; // Importa el componente Image de Next.js
 import { Box, Typography, Button, Container } from '@mui/material'; // Importa componentes de Material-UI

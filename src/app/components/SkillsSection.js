@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, Typography, Box, Slider } from "@mui/material";
 
 const SkillsSection = ({ skills }) => {

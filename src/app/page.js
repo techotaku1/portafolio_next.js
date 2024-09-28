@@ -5,21 +5,11 @@ import ExperienceSection from "./components/ExperienceSection";
 import PortfolioSection from "./components/PortfolioSection";
 import { Box, Container } from "@mui/material";
 
-// Sección para obtener los datos estáticos
-async function fetchData() {
-  // Aquí puedes hacer la llamada a tu API o simplemente usar datos locales
-  // Si estás utilizando datos locales, asegúrate de que están disponibles en este contexto
-  const skills = await import('./components/profile').then(mod => mod.skills);
-  const experience = await import('./components/profile').then(mod => mod.experience);
-  const portfolio = await import('./components/profile').then(mod => mod.portfolio);
-
-  return { skills, experience, portfolio };
-}
+// Importar datos locales
+import { skills, experience, portfolio } from './components/profile';
 
 // Componente de la página principal
-const Page = async () => {
-  const { skills, experience, portfolio } = await fetchData();
-
+const Page = () => {
   return (
     <Container maxWidth="lg">
       <Box
