@@ -1,6 +1,6 @@
 // app/sitemap.js
 export default function sitemap() {
-    const baseUrl = 'https://portafolio-next-js-1.onrender.com'; // Cambia esto a tu URL base
+    const baseUrl = 'https://portafolio-next-js.onrender.com'; // Cambia esto a tu URL base
   
     return [
       {
