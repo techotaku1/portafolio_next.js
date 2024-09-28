@@ -4,7 +4,6 @@ export const metadata = {
   metadataBase: new URL('https://portafolio-next-js-1.onrender.com/'),
   title: 'Portafolio de José David González - Freelancer en Colombia',
   description: 'Desarrollador de software en Colombia especializado en React, Next.js, FastAPI, HTML, CSS y JavaScript.',
-  keywords: 'freelancer, Colombia, React, Next.js, Python, FastAPI, HTML, CSS, JavaScript',
   openGraph: {
     title: 'Portafolio de José David González - Freelancer en Colombia',
     description: 'Portafolio web para mostrar proyectos de desarrollo frontend y backend.',

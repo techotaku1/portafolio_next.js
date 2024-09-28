@@ -57,7 +57,15 @@ export default function GitHub() {
       className="container"
       sx={{ display: "flex", justifyContent: "center" }}
     >
-      <Card variant="outlined" sx={{ maxWidth: 600, textAlign: "center" }}>
+      <Card
+  variant="outlined"
+  sx={{
+    maxWidth: 600,
+    textAlign: "center",
+    mt:2
+  }}
+>
+
         <CardHeader
           title="Mi GitHub"
           sx={{

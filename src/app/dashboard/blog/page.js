@@ -10,7 +10,7 @@ const Blog = () => {
     <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mt: 4 }}>
       {BlogItems.length > 0 ? (
         BlogItems.map((item) => (
-          <Box key={item.id} sx={{ maxWidth: 250, mx: 1, mb: 4 }}> {/* Ajusta el tamaño de las columnas */}
+          <Box key={item.id} sx={{ maxWidth: 250, mx: 1, mb: 2 }}> {/* Ajusta el tamaño de las columnas */}
             <Card variant="outlined" sx={{ textAlign: 'center' }}> {/* Tarjeta Material-UI */}
               <CardContent>
                 <Box sx={{ width: '100px', height: '100px', overflow: 'hidden', margin: '0 auto' }}>

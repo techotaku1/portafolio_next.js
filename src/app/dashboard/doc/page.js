@@ -22,11 +22,11 @@ const DocPage = () => {
   };
 
   return (
-    <Box sx={{ minHeight: "100vh", mt: 2, mb: 1}}>
+    <Box sx={{ minHeight: "100vh", mt: 2, mb: 1 }}>
       {/* Título principal */}
       <Paper
         elevation={3}
-        sx={{ p: 3, bgcolor: "#fff", mb: 1,borderRadius: 2 }}
+        sx={{ p: 3, bgcolor: "#fff", mb: 1, borderRadius: 2 }}
       >
         <Typography variant="h4" color="text.primary" fontWeight="bold">
           Proyecto de Portafolio con Next.js
@@ -34,10 +34,7 @@ const DocPage = () => {
       </Paper>
 
       {/* Funcionalidades Implementadas */}
-      <Paper
-        elevation={0}
-        sx={{ p: 3, bgcolor: "#fff", borderRadius: 2 }}
-      >
+      <Paper elevation={0} sx={{ p: 3, bgcolor: "#fff", borderRadius: 2 }}>
         <Typography variant="h5" color="text.primary" fontWeight="bold">
           Funcionalidades Implementadas
         </Typography>
@@ -188,32 +185,66 @@ const DocPage = () => {
         </Section>
 
         {/* Resumen sobre Estrategias de Renderizado */}
-        <Section title="7. Estrategias de Renderizado en Next.js" bgcolor="white">
+        <Section
+          title="7. Estrategias de Renderizado en Next.js"
+          bgcolor="white"
+        >
           <Typography variant="body1" color="text.secondary">
-            En Next.js, hay varias estrategias de renderizado que puedes utilizar, cada una adecuada para diferentes casos de uso:
+            En Next.js, hay varias estrategias de renderizado que puedes
+            utilizar, cada una adecuada para diferentes casos de uso:
           </Typography>
           <List>
             <ListItem>
               <Typography variant="body2" color="text.secondary">
-                <strong>SSR (Server-Side Rendering)</strong>: Ideal para contenido que cambia con frecuencia y necesita ser actualizado en cada solicitud. Permite obtener datos dinámicos en el servidor antes de renderizar la página.
+                <strong>SSR (Server-Side Rendering)</strong>: Ideal para
+                contenido que cambia con frecuencia y necesita ser actualizado
+                en cada solicitud. Permite obtener datos dinámicos en el
+                servidor antes de renderizar la página.
               </Typography>
             </ListItem>
             <ListItem>
               <Typography variant="body2" color="text.secondary">
-                <strong>SSG (Static Site Generation)</strong>: Perfecto para contenido estático o que se actualiza periódicamente. Genera páginas estáticas en el momento de la construcción, mejorando el rendimiento y SEO.
+                <strong>SSG (Static Site Generation)</strong>: Perfecto para
+                contenido estático o que se actualiza periódicamente. Genera
+                páginas estáticas en el momento de la construcción, mejorando el
+                rendimiento y SEO.
               </Typography>
             </ListItem>
             <ListItem>
               <Typography variant="body2" color="text.secondary">
-                <strong>CSR (Client-Side Rendering)</strong>: Útil para componentes interactivos y en situaciones donde necesitas manejar el estado del cliente. Todo el contenido se carga en el cliente después de la primera solicitud.
+                <strong>CSR (Client-Side Rendering)</strong>: Útil para
+                componentes interactivos y en situaciones donde necesitas
+                manejar el estado del cliente. Todo el contenido se carga en el
+                cliente después de la primera solicitud.
               </Typography>
             </ListItem>
             <ListItem>
               <Typography variant="body2" color="text.secondary">
-                <strong>ISR (Incremental Static Regeneration)</strong>: Combina lo mejor de SSR y SSG, permitiendo que las páginas estáticas se regeneren de forma incremental, ofreciendo contenido fresco sin necesidad de recompilar todo el sitio.
+                <strong>ISR (Incremental Static Regeneration)</strong>: Combina
+                lo mejor de SSR y SSG, permitiendo que las páginas estáticas se
+                regeneren de forma incremental, ofreciendo contenido fresco sin
+                necesidad de recompilar todo el sitio.
               </Typography>
             </ListItem>
           </List>
+        </Section>
+
+        {/* Nueva sección sobre Sitemap y Robots.txt */}
+        <Section title="8. Sitemap y Robots.txt" bgcolor="white">
+          <Typography variant="body1" color="text.secondary">
+            Un <strong>sitemap</strong> es un archivo que enumera las páginas de
+            un sitio web, ayudando a los motores de búsqueda a indexar el
+            contenido de manera más eficiente. Es una herramienta crucial para
+            el SEO, ya que proporciona información sobre la estructura del sitio
+            y facilita el descubrimiento de páginas nuevas o actualizadas.
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>
+            Por otro lado, el archivo <strong>robots.txt</strong> se utiliza
+            para controlar el acceso de los robots de búsqueda a ciertas partes
+            de tu sitio web. Permite especificar qué páginas o secciones deben
+            ser excluidas de la indexación, asegurando que solo el contenido
+            relevante sea indexado.
+          </Typography>
         </Section>
       </Paper>
     </Box>
@@ -224,7 +255,7 @@ const DocPage = () => {
 const Section = ({ title, children, bgcolor = "#fff" }) => (
   <Paper
     elevation={2}
-    sx={{ p: 3, bgcolor, mt: 2,borderRadius: 2, boxShadow: 3 }}
+    sx={{ p: 3, bgcolor, mt: 2, borderRadius: 2, boxShadow: 3 }}
   >
     <Typography variant="h6" color="text.primary" fontWeight="bold">
       {title}

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /api/                # No rastrear la carpeta de API si existe
+Allow: /                       # Permitir el rastreo de todo lo demás
+
+Sitemap: https://portafolio-next-js-1.onrender.com/sitemap.xml  # URL del sitemap

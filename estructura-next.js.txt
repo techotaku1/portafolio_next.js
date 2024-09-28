@@ -1,7 +1,7 @@
 MI-PORTAFOLIO/
 ├── src/                                  // Carpeta principal del código fuente
 │   ├── app/                              // Carpeta para la aplicación Next.js
-│   │   ├── layout.js                     // Componente de diseño principal; envuelve la estructura general de la app
+│   │   ├── layout.js                     // Componente de diseño principal
 │   │   ├── page.js                       // Página principal de la aplicación
 │   │   ├── not-found.js                  // Componente que se muestra cuando no se encuentra una página
 │   │   ├── template.js                   // Plantilla para generar páginas dinámicas
@@ -26,10 +26,12 @@ MI-PORTAFOLIO/
 │   │       │   └── page.js               // Página principal de la sección de GitHub
 │   │       └── components/               // Carpeta para componentes específicos del dashboard
 │   │           └── DrawerButton.js       // Componente para los botones del menú desplegable
+│   │   ├── sitemap.js                     // Archivo para el sitemap
 │   └── theme.js                          // Archivo de configuración de temas para Material-UI
 ├── public/                               // Carpeta para archivos públicos y estáticos
 │   └── imagen.png                        // Imagen utilizada en la aplicación
-├── package.json                          // Archivo de configuración del proyecto (dependencias, scripts, etc.)
+├── package.json                          // Archivo de configuración del proyecto
 ├── next.config.js                       // Archivo de configuración para Next.js
 ├── .gitignore                            // Archivo que especifica qué archivos/directorios ignorar en Git
 └── README.md                             // Documentación del proyecto
+├── robots.txt                            // Archivo para las directivas de robots
