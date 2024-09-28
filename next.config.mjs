@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Habilita la exportación estática
-  reactStrictMode: true,
-  images: {
-    unoptimized: true, // Desactiva la optimización de imágenes
-  },
+  // output: 'export', 
+  // reactStrictMode: true,
+  // images: {
+  //   unoptimized: true, 
+  // },
 };
 
 export default nextConfig;

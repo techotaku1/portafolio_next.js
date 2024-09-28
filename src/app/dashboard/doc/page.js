@@ -22,11 +22,11 @@ const DocPage = () => {
   };
 
   return (
-    <Box sx={{ p: 4, minHeight: "100vh" }}>
+    <Box sx={{ minHeight: "100vh", mt: 2, mb: 1}}>
       {/* Título principal */}
       <Paper
         elevation={3}
-        sx={{ p: 3, bgcolor: "#fff", mb: 3, borderRadius: 2 }}
+        sx={{ p: 3, bgcolor: "#fff", mb: 1,borderRadius: 2 }}
       >
         <Typography variant="h4" color="text.primary" fontWeight="bold">
           Proyecto de Portafolio con Next.js
@@ -36,7 +36,7 @@ const DocPage = () => {
       {/* Funcionalidades Implementadas */}
       <Paper
         elevation={0}
-        sx={{ p: 3, bgcolor: "#fff", mb: 3, borderRadius: 2 }}
+        sx={{ p: 3, bgcolor: "#fff", borderRadius: 2 }}
       >
         <Typography variant="h5" color="text.primary" fontWeight="bold">
           Funcionalidades Implementadas
@@ -120,13 +120,11 @@ const DocPage = () => {
         </Section>
 
         {/* Implementación de Sharp */}
-        <Section title="5. Implementación de Sharp" bgcolor="#d1e7dd">
+        <Section title="5. Implementación de Sharp" bgcolor="##fff">
           <Typography variant="body1" color="text.secondary">
             <strong>Optimización de Imágenes con Sharp</strong>
           </Typography>
-          <ListItemText
-            description="Sharp es un paquete de Node.js que permite la manipulación de imágenes, incluyendo la optimización y el cambio de tamaño. Se recomienda su uso para mejorar el rendimiento de las aplicaciones que utilizan imágenes."
-          />
+          <ListItemText description="Sharp es un paquete de Node.js que permite la manipulación de imágenes, incluyendo la optimización y el cambio de tamaño. Se recomienda su uso para mejorar el rendimiento de las aplicaciones que utilizan imágenes." />
           <ListItemText
             title="Instalación"
             description={`Para instalar Sharp, ejecuta el siguiente comando en la terminal:`}
@@ -152,7 +150,7 @@ const DocPage = () => {
         </Section>
 
         {/* Código de Control de Versiones */}
-        <Section title="6. Código de Control de Versiones" bgcolor="#fff54f">
+        <Section title="6. Código de Control de Versiones" bgcolor="##fff">
           <Typography variant="body1" color="text.secondary">
             <strong>Comandos: para agregar commit</strong>
           </Typography>
@@ -190,10 +188,7 @@ const DocPage = () => {
         </Section>
 
         {/* Resumen sobre Estrategias de Renderizado */}
-        <Box sx={{ mt: 4 }}>
-          <Typography variant="h5" color="text.primary" fontWeight="bold">
-            Estrategias de Renderizado en Next.js
-          </Typography>
+        <Section title="7. Estrategias de Renderizado en Next.js" bgcolor="white">
           <Typography variant="body1" color="text.secondary">
             En Next.js, hay varias estrategias de renderizado que puedes utilizar, cada una adecuada para diferentes casos de uso:
           </Typography>
@@ -219,17 +214,17 @@ const DocPage = () => {
               </Typography>
             </ListItem>
           </List>
-        </Box>
+        </Section>
       </Paper>
     </Box>
   );
 };
 
 // Componente para secciones
-const Section = ({ title, children }) => (
+const Section = ({ title, children, bgcolor = "#fff" }) => (
   <Paper
     elevation={2}
-    sx={{ p: 2, bgcolor: "transparent", mt: 2, borderRadius: 2, boxShadow: 3 }}
+    sx={{ p: 3, bgcolor, mt: 2,borderRadius: 2, boxShadow: 3 }}
   >
     <Typography variant="h6" color="text.primary" fontWeight="bold">
       {title}
