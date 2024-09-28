@@ -119,8 +119,40 @@ const DocPage = () => {
           />
         </Section>
 
+        {/* Implementación de Sharp */}
+        <Section title="5. Implementación de Sharp" bgcolor="#d1e7dd">
+          <Typography variant="body1" color="text.secondary">
+            <strong>Optimización de Imágenes con Sharp</strong>
+          </Typography>
+          <ListItemText
+            description="Sharp es un paquete de Node.js que permite la manipulación de imágenes, incluyendo la optimización y el cambio de tamaño. Se recomienda su uso para mejorar el rendimiento de las aplicaciones que utilizan imágenes."
+          />
+          <ListItemText
+            title="Instalación"
+            description={`Para instalar Sharp, ejecuta el siguiente comando en la terminal:`}
+          />
+          <Box
+            sx={{
+              bgcolor: "#f5f5f5",
+              p: 2,
+              borderRadius: "4px",
+              mt: 1,
+              width: "100%", // Ajusta el ancho al 100%
+              overflow: "auto", // Permite el scroll en caso de desbordamiento
+            }}
+          >
+            <pre>
+              <code>{`npm install sharp`}</code>
+            </pre>
+          </Box>
+          <ListItemText
+            title="Uso"
+            description="Sharp se utiliza automáticamente por Next.js cuando se maneja la optimización de imágenes. Solo es necesario instalarlo, y Next.js se encargará del resto."
+          />
+        </Section>
+
         {/* Código de Control de Versiones */}
-        <Section title="5. Código de Control de Versiones" bgcolor="#fff54f">
+        <Section title="6. Código de Control de Versiones" bgcolor="#fff54f">
           <Typography variant="body1" color="text.secondary">
             <strong>Comandos: para agregar commit</strong>
           </Typography>
