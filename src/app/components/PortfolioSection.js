@@ -45,16 +45,13 @@ const PortfolioSection = () => (
           }}
         >
           {/* Box para la imagen */}
-          <Box sx={{ flexShrink: 0 }}>
+          <Box sx={{ flexShrink: 0, width: '100%', height: '200px', position: 'relative' }}>
             <Image
               src={image}
               alt={title}
-              width={300}
-              height={200}
+              fill // Utiliza fill en lugar de layout
               style={{
-                width: '100%', // Ancho completo
-                height: '200px', // Altura fija para asegurar uniformidad
-                objectFit: 'cover', // Ajusta la imagen sin perder contenido
+                objectFit: 'contain', // Ajusta la imagen sin recortar
                 display: 'block',
               }}
             />

@@ -1,35 +1,35 @@
 MI-PORTAFOLIO/
-├── src/
-│   ├── app/
-│   │   ├── layout.js
-│   │   ├── page.js
-│   │   ├── not-found.js
-│   │   ├── template.js
-│   │   ├── global-error.js                  // Archivo de error global
-│   │   ├── components/
-│   │   │   ├── Navbar.js
-│   │   │   ├── Footer.js
-│   │   │   ├── profile.js
-│   │   │   ├── navigation-events.js
-│   │   │   ├── ExperienceSection.js
-│   │   │   ├── PortfolioSection.js
-│   │   │   ├── ProfileSection.js
-│   │   │   └── SkillsSection.js
-│   │   └── dashboard/
-│   │       ├── layout.js
-│   │       ├── page.js
-│   │       ├── error.js
-│   │       ├── blog/
-│   │       │   └── page.js
-│   │       └── github/
-│   │           ├── loading.js        // Archivo de carga
-│   │           └── page.js
-│   └── styles/
-│       ├── global.css
-│       └── MiComponente.module.css
-├── public/
-│   └── imagen.png
-├── package.json
-├── next.config.js
-├── .gitignore
-└── README.md
+├── src/                                  // Carpeta principal del código fuente
+│   ├── app/                              // Carpeta para la aplicación Next.js
+│   │   ├── layout.js                     // Componente de diseño principal; envuelve la estructura general de la app
+│   │   ├── page.js                       // Página principal de la aplicación
+│   │   ├── not-found.js                  // Componente que se muestra cuando no se encuentra una página
+│   │   ├── template.js                   // Plantilla para generar páginas dinámicas
+│   │   ├── global-error.js               // Componente de error global para manejar errores en la app
+│   │   ├── components/                   // Carpeta para componentes reutilizables
+│   │   │   ├── Navbar.js                 // Componente de la barra de navegación
+│   │   │   ├── Footer.js                 // Componente del pie de página
+│   │   │   ├── profile.js                // Componente que muestra información del perfil
+│   │   │   ├── navigation-events.js      // Manejo de eventos de navegación
+│   │   │   ├── ExperienceSection.js      // Sección que muestra la experiencia del usuario
+│   │   │   ├── PortfolioSection.js       // Sección que muestra el portafolio del usuario
+│   │   │   ├── ProfileSection.js         // Sección que muestra detalles del perfil
+│   │   │   └── SkillsSection.js          // Sección que muestra las habilidades del usuario
+│   │   └── dashboard/                     // Carpeta para las páginas del dashboard
+│   │       ├── layout.js                 // Componente de diseño para las páginas del dashboard
+│   │       ├── page.js                   // Página principal del dashboard
+│   │       ├── error.js                  // Componente para manejar errores en el dashboard
+│   │       ├── blog/                     // Carpeta para la sección del blog
+│   │       │   └── page.js               // Página principal del blog
+│   │       ├── github/                   // Carpeta para la sección de GitHub
+│   │       │   ├── loading.js            // Componente que muestra una pantalla de carga
+│   │       │   └── page.js               // Página principal de la sección de GitHub
+│   │       └── components/               // Carpeta para componentes específicos del dashboard
+│   │           └── DrawerButton.js       // Componente para los botones del menú desplegable
+│   └── theme.js                          // Archivo de configuración de temas para Material-UI
+├── public/                               // Carpeta para archivos públicos y estáticos
+│   └── imagen.png                        // Imagen utilizada en la aplicación
+├── package.json                          // Archivo de configuración del proyecto (dependencias, scripts, etc.)
+├── next.config.js                       // Archivo de configuración para Next.js
+├── .gitignore                            // Archivo que especifica qué archivos/directorios ignorar en Git
+└── README.md                             // Documentación del proyecto
