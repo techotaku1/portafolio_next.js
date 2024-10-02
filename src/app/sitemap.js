@@ -10,13 +10,13 @@ export default function sitemap() {
         priority: 1, // Prioridad
       },
       {
-        url: `${baseUrl}/dashboard/github`, // Ruta de GitHub
+        url: `${baseUrl}dashboard/github`, // Ruta de GitHub
         lastModified: '2024-10-02',
         changeFrequency: 'monthly',
         priority: 0.8,
       },
       {
-        url: `${baseUrl}/dashboard/doc`, // Ruta de Documentación
+        url: `${baseUrl}dashboard/doc`, // Ruta de Documentación
         lastModified: '2024-10-02',
         changeFrequency: 'weekly',
         priority: 0.8,
