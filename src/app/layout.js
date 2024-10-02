@@ -2,7 +2,7 @@
 export const metadata = {
   metadataBase: new URL('https://josedavidgonzalez-dev.onrender.com/'),
   title: 'Portafolio de José David González - Freelancer en Colombia',
-  description: 'Desarrollador de software en Colombia especializado en React, Next.js, FastAPI, HTML, CSS y JavaScript.'
+  description: 'Desarrollador de software en Colombia especializado en React, Next.js, FastAPI, HTML, CSS y JavaScript.',
   }
 
 export default function RootLayout({ children }) {
@@ -15,9 +15,30 @@ export default function RootLayout({ children }) {
     url: 'https://josedavidgonzalez-dev.onrender.com/',
     image: '/mi-imagen.jpg',
     sameAs: [
-      'https://www.linkedin.com/in/jjose18/', // Enlace a tu perfil de LinkedIn
+      'https://www.linkedin.com/in/jjose18/',
     ],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'CO',
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+57-322-5727602',
+        contactType: 'WhatsApp',
+        areaServed: 'CO',
+        availableLanguage: 'Spanish',
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+57-324-1149554',
+        contactType: 'Llamadas',
+        areaServed: 'CO',
+        availableLanguage: 'Spanish',
+      }
+    ]
   };
+  
 
   return (
     <html lang="es">
