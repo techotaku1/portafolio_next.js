@@ -78,7 +78,7 @@ const ProfileSection = () => (
           sx={{ mt: 2 }}
         >
           {/* Botón de CONTACTAME */}
-          <Link href="https://drive.google.com/file/d/1N1Suw0Ewk1NPcN9-Mah5lSg2UaZbxpOK/view?usp=sharing" passHref target="_blank" >
+          <Link href="https://docs.google.com/document/d/1kqRV43yV2ZLz0HdBHo_6All556IK-GgFYC-8wb4WUcU/edit?usp=sharing" passHref target="_blank" >
             <Button
               variant="outlined"
               sx={{
