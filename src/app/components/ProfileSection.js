@@ -69,6 +69,10 @@ const ProfileSection = () => (
           frontend y backend. Me especializo en React, Next.js y Python con
           FastAPI para crear aplicaciones modernas y eficientes.
         </Typography>
+        <Typography variant="body1" sx={{ marginTop: 2 }}>
+          También tengo experiencia en edición de video utilizando CapCut y
+          en la creación de presentaciones con Canva.
+        </Typography>
 
         {/* Contenedor para el botón y los iconos */}
         <Box
@@ -78,7 +82,11 @@ const ProfileSection = () => (
           sx={{ mt: 2 }}
         >
           {/* Botón de CONTACTAME */}
-          <Link href="https://docs.google.com/document/d/1kqRV43yV2ZLz0HdBHo_6All556IK-GgFYC-8wb4WUcU/edit?usp=sharing" passHref target="_blank" >
+          <Link
+            href="https://docs.google.com/document/d/1kqRV43yV2ZLz0HdBHo_6All556IK-GgFYC-8wb4WUcU/edit?usp=sharing"
+            passHref
+            target="_blank"
+          >
             <Button
               variant="outlined"
               sx={{
@@ -99,10 +107,9 @@ const ProfileSection = () => (
 
           {/* Iconos de contacto */}
           <Box sx={{ display: "flex", gap: 2, ml: 2 }}>
-            {" "}
             {/* Agrega margen izquierdo */}
             <Link
-              href="https://wa.me/573241149554"
+              href="https://wa.me/573225727602"
               target="_blank"
               rel="noopener noreferrer"
             >

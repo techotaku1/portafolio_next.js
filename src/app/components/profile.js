@@ -26,7 +26,7 @@ export const experience = [
   {
     title: "Editor de Videos",
     description:
-      "Tengo experiencia en la edición de videos utilizando CapCut y Canva.",
+      "Tengo experiencia en la edición de videos utilizando CapCut y en la creación de presentaciones con Canva.",
   },
 ];
 
