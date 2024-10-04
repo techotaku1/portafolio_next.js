@@ -1,14 +1,20 @@
 // app/about/page.js
 
 export const metadata = {
-  title: {
-    absolute: 'Sobre mí - Jose David Gonzalez Gonzalez',
-  },
-  description: 'Conoce más sobre Jose David Gonzalez, desarrollador Full Stack con experiencia en React, Next.js y FastAPI. Freelance en Colombia.',
-  keywords: ['Sobre mí', 'Desarrollador Full Stack', 'Freelancer', 'Colombia', 'Jose David Gonzalez'],
+  title: 'Sobre mí - Jose David Gonzalez Gonzalez',
+  description: 'Conoce más sobre Jose David Gonzalez, desarrollador Full Stack, diseñador de páginas web y experto en publicidad digital en Colombia.',
+  keywords: [
+    'Sobre mí', 
+    'Desarrollador Full Stack', 
+    'Freelancer', 
+    'Colombia', 
+    'Jose David Gonzalez', 
+    'Diseñador web', 
+    'Publicidad digital'
+  ],
   openGraph: {
     title: 'Sobre mí - Jose David Gonzalez Gonzalez',
-    description: 'Desarrollador Full Stack con amplia experiencia en tecnologías web modernas como React y Next.js.',
+    description: 'Desarrollador Full Stack en Colombia, especializado en React, Next.js, publicidad digital y presentaciones para negocios.',
     url: 'https://josedavidgonzalez-dev.onrender.com/about',
     type: 'website',
     images: [
@@ -23,7 +29,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sobre mí - Jose David Gonzalez Gonzalez',
-    description: 'Desarrollador Full Stack con experiencia en React, Next.js y FastAPI.',
+    description: 'Desarrollador Full Stack y experto en publicidad digital. Ayudo a negocios a mejorar su presencia digital.',
     image: '/mi-imagen2.jpg',
   },
 };
@@ -42,6 +48,7 @@ const jsonLdAbout = {
     "@type": "Organization",
     "name": "Freelancer"
   },
+  "description": "Desarrollador Full Stack con experiencia en React, Next.js, publicidad digital y creación de presentaciones para empresas.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Cali",
@@ -56,7 +63,7 @@ export default function AboutPage() {
     <html lang="es">
       <head>
         <title>Sobre mí - Jose David Gonzalez</title>
-        <meta name="description" content="Conoce más sobre Jose David Gonzalez, desarrollador Full Stack en Colombia." />
+        <meta name="description" content="Conoce más sobre Jose David Gonzalez, desarrollador Full Stack y experto en publicidad digital en Colombia." />
         {/* JSON-LD Data */}
         <script
           type="application/ld+json"
@@ -65,24 +72,28 @@ export default function AboutPage() {
       </head>
       <body>
         <h1>Sobre mí</h1>
-        <p>Hola, soy Jose David Gonzalez, un desarrollador Full Stack con experiencia en React, Next.js, FastAPI, HTML, CSS y JavaScript. Trabajo como freelancer en Colombia y tengo un gran interés en crear soluciones innovadoras.</p>
+        <p>Hola, soy Jose David Gonzalez, un desarrollador Full Stack con experiencia en React, Next.js, FastAPI, HTML, CSS y JavaScript. Trabajo como freelancer en Colombia y ayudo a negocios a mejorar su presencia digital mediante publicidad digital efectiva y diseño de páginas web optimizadas.</p>
         
         <h2>Habilidades</h2>
         <ul>
-          <li>Desarrollo Frontend con React y Next.js</li>
-          <li>Desarrollo Backend con FastAPI</li>
-          <li>Diseño de interfaces amigables y responsivas</li>
-          <li>Optimización SEO y rendimiento de aplicaciones web</li>
+          <li>Diseño y desarrollo de páginas web optimizadas para SEO</li>
+          <li>Publicidad digital efectiva para negocios</li>
+          <li>Creación de presentaciones visuales impactantes</li>
+          <li>Consultoría en marketing digital para mejorar la presencia en línea</li>
           <li>Edición de video con CapCut</li>
-          <li>Creación de presentaciones impactantes en Canva</li>
+          <li>Creación de presentaciones en Canva</li>
         </ul>
 
-        <h2>Proyectos Destacados</h2>
-        <p>Aquí puedes mencionar algunos de tus proyectos más relevantes o incluso incluir enlaces a ellos.</p>
-        
+        <h2>Servicios que ofrezco</h2>
+        <ul>
+          <li>Diseño y desarrollo de páginas web modernas y funcionales</li>
+          <li>Optimización SEO y mejora de la visibilidad en motores de búsqueda</li>
+          <li>Publicidad digital dirigida a negocios locales y globales</li>
+          <li>Consultoría en marketing digital y estrategia de contenido</li>
+        </ul>
+
         <h2>Contacta conmigo</h2>
         <p>Puedes contactarme a través de mis perfiles de LinkedIn y GitHub, o enviarme un mensaje por WhatsApp al +573225727602.</p>
-        {/* Más contenido relevante sobre ti */}
       </body>
     </html>
   );

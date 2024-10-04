@@ -2,24 +2,23 @@
 
 export const metadata = {
   metadataBase: new URL('https://josedavidgonzalez-dev.onrender.com/'),
-  title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack',
-  description: 'Desarrollador de software en Colombia especializado en React, Next.js, FastAPI, HTML, CSS y JavaScript. Freelancer con amplia experiencia.',
+  title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
+  description: 'Desarrollador Full Stack y diseñador de páginas web en Cali, Colombia. Especializado en React, Next.js, FastAPI, y publicidad digital para negocios.',
   keywords: [
-    'Desarrollador Full Stack',
-    'React',
-    'Next.js',
-    'FastAPI',
-    'Colombia',
-    'Freelancer',
-    'Portafolio',
-    'Edición de video',
-    'CapCut',
-    'Presentaciones',
-    'Canva'
+    'Diseñador de páginas web',
+    'Publicidad digital',
+    'Desarrollo web',
+    'Presentaciones profesionales',
+    'Marketing digital',
+    'Freelancer en Colombia',
+    'Servicios web para negocios',
+    'Consultoría digital',
+    'SEO',
+    'Diseño responsivo'
   ],
   openGraph: {
-    title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack',
-    description: 'Freelancer en Colombia con experiencia en desarrollo frontend y backend.',
+    title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
+    description: 'Freelancer en Colombia con experiencia en diseño web, publicidad digital y presentaciones profesionales.',
     url: 'https://josedavidgonzalez-dev.onrender.com/',
     type: 'website',
     images: [
@@ -33,9 +32,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack',
-    description: 'Freelancer en Colombia con experiencia en React, Next.js, y FastAPI.',
-    image: '/mi-imagen2.jpg', // Corregido el nombre de la imagen
+    title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
+    description: 'Freelancer con experiencia en desarrollo web, marketing digital y creación de presentaciones.',
+    image: '/mi-imagen2.jpg',
   },
   generator: 'Next.js',
   applicationName: 'Jose David Gonzalez Portfolio',
@@ -59,7 +58,7 @@ export const viewport = {
   userScalable: false,
 };
 
-// Añadir datos estructurados (JSON-LD) para mejorar el SEO
+// Datos estructurados (JSON-LD) para SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -74,8 +73,7 @@ const jsonLd = {
     "@type": "Organization",
     "name": "Freelancer"
   },
-  "additionalType": "https://schema.org/CreativeWork",
-  "description": "Desarrollador Full Stack con experiencia en React, Next.js y FastAPI. Edición de video en CapCut y presentaciones en Canva.",
+  "description": "Desarrollador Full Stack y diseñador web en Colombia, especializado en React, Next.js, publicidad digital y presentaciones profesionales para negocios.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Cali",
