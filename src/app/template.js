@@ -14,7 +14,8 @@ import { Suspense } from "react";
 export default function Template({ children }) {
   const pathname = usePathname();
 
-  // Rutas donde se ocultará el footer
+  // Rutas donde se ocultará el footer y el navbar
+  const hideNavbarRoutes = ["/about"]; // Lista de rutas que ocultarán el Navbar
   const hideFooterRoutes = ["/dashboard/blog", "/dashboard/github"];
 
   return (
@@ -29,7 +30,7 @@ export default function Template({ children }) {
         </Suspense>
 
         {/* Barra de navegación */}
-        <Navbar />
+        {!hideNavbarRoutes.includes(pathname) && <Navbar />}
 
         {/* Contenedor principal responsivo */}
         <Box

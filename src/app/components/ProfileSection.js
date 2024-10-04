@@ -37,6 +37,7 @@ const ProfileSection = () => (
           overflow: "hidden",
           marginBottom: { xs: 2, md: 0 },
           flexShrink: 0,
+         
         }}
       >
         <Image

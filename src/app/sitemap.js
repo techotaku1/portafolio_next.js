@@ -10,12 +10,6 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`, // Página "About"
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'yearly', // Actualización anual para la sección "About"
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/dashboard/github`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'monthly', // Actualización mensual para secciones cambiantes
