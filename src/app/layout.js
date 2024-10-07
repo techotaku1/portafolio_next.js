@@ -1,6 +1,7 @@
 // app/layout.js
 import { Analytics } from '@vercel/analytics/react';
-import { WebVitals } from './components/web-vitals';
+import { SpeedInsights } from "@vercel/speed-insights";
+
 export const metadata = {
   metadataBase: new URL('https://josedavidgonzalez-dev.onrender.com/'),
   title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
@@ -96,6 +97,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <SpeedInsights />
         <WebVitals />
         <Analytics />
       </body>
