@@ -1,5 +1,6 @@
 // app/layout.js
-
+import { Analytics } from '@vercel/analytics/react';
+import { WebVitals } from './components/web-vitals';
 export const metadata = {
   metadataBase: new URL('https://josedavidgonzalez-dev.onrender.com/'),
   title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
@@ -29,6 +30,8 @@ export const metadata = {
         alt: 'Jose David Gonzalez Gonzalez',
       },
     ],
+    locale: 'es_CO',
+    siteName: 'Jose David Gonzalez Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
@@ -44,18 +47,11 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-};
-
-// Viewport para mejorar la experiencia en dispositivos móviles
-export const viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'cyan' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: 'Jose David Gonzalez Gonzalez' }],
 };
 
 // Datos estructurados (JSON-LD) para SEO
@@ -100,6 +96,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <WebVitals />
+        <Analytics />
       </body>
     </html>
   );
