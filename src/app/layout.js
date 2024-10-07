@@ -1,5 +1,6 @@
 // app/layout.js
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   metadataBase: new URL('https://miportafolio-pied.vercel.app/'),
@@ -96,6 +97,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
       <Analytics />
+      <SpeedInsights />
         {children}
       </body>
     </html>
