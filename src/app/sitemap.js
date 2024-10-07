@@ -1,6 +1,6 @@
 // app/sitemap.js
 export default function sitemap() {
-  const baseUrl = 'https://josedavidgonzalez-dev.onrender.com';
+  const baseUrl = 'https://miportafolio-pied.vercel.app';
 
   return [
     {

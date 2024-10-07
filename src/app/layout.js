@@ -1,9 +1,8 @@
 // app/layout.js
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights";
 
 export const metadata = {
-  metadataBase: new URL('https://josedavidgonzalez-dev.onrender.com/'),
+  metadataBase: new URL('https://miportafolio-pied.vercel.app/'),
   title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
   description: 'Desarrollador Full Stack y diseñador de páginas web en Cali, Colombia. Especializado en React, Next.js, FastAPI, y publicidad digital para negocios.',
   keywords: [
@@ -21,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
     description: 'Freelancer en Colombia con experiencia en diseño web, publicidad digital y presentaciones profesionales.',
-    url: 'https://josedavidgonzalez-dev.onrender.com/',
+    url: 'https://miportafolio-pied.vercel.app/',
     type: 'website',
     images: [
       {
@@ -61,7 +60,7 @@ const jsonLd = {
   "@type": "Person",
   "name": "Jose David Gonzalez Gonzalez",
   "jobTitle": "Desarrollador Full Stack",
-  "url": "https://josedavidgonzalez-dev.onrender.com/",
+  "url": "https://miportafolio-pied.vercel.app/",
   "sameAs": [
     "https://www.linkedin.com/in/jjose18",
     "https://github.com/techotaku1"
@@ -96,9 +95,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+      <Analytics />
         {children}
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   );

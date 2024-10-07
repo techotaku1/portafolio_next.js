@@ -1,6 +1,6 @@
 // next-sitemap.config.js
 module.exports = {
-    siteUrl: 'https://josedavidgonzalez-dev.onrender.com', // Cambia esto por tu dominio
+    siteUrl: 'https://miportafolio-pied.vercel.app', // Cambia esto por tu dominio
     
   };
   

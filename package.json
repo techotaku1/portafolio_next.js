@@ -24,13 +24,13 @@
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
     "glob": "^11.0.0",
+    "lru-cache": "^11.0.1",
     "next": "14.2.13",
     "next-sitemap": "^4.2.3",
     "nprogress": "^0.2.0",
     "react": "^18",
     "react-dom": "^18",
     "react-top-loading-bar": "^2.3.1",
-    "rimraf": "^6.0.1",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
@@ -39,6 +39,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8.0.0",
     "eslint-config-next": "14.2.13",
+    "rimraf": "^6.0.1",
     "typescript": "^5.5.4"
   }
 }

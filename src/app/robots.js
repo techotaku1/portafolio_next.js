@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://josedavidgonzalez-dev.onrender.com/sitemap.xml',
+    sitemap: 'https://miportafolio-pied.vercel.app/sitemap.xml',
   }
 }
