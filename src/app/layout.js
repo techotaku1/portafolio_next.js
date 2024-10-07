@@ -98,7 +98,6 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <SpeedInsights />
-        <WebVitals />
         <Analytics />
       </body>
     </html>
