@@ -1,4 +1,3 @@
-// app/layout.js
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -89,6 +88,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
+        {/* Meta tag de verificación de Google */}
+        <meta name="google-site-verification" content="AGpNPOb2L1Z4p1pOdNGsInrVPMiVKBk020FAa0TxGV0" />
+        
         {/* Renderizando JSON-LD como script dentro de head */}
         <script
           type="application/ld+json"
@@ -96,8 +98,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-      <Analytics />
-      <SpeedInsights />
+        <Analytics />
+        <SpeedInsights />
         {children}
       </body>
     </html>
