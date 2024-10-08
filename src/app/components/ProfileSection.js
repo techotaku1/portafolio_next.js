@@ -44,7 +44,7 @@ const ProfileSection = () => (
           src="/mi-imagen2.webp" // Asegúrate de que esta imagen esté en formato WebP
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-          loading="lazy"
+       
           style={{ objectFit: "cover" }} // Asegúrate de que la imagen cubra el contenedor
         />
       </Box>
