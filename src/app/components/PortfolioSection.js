@@ -1,5 +1,4 @@
-// components/PortfolioSection.js
-'use client'
+"use client";
 import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +46,7 @@ const PortfolioSection = () => (
           {/* Box para la imagen */}
           <Box sx={{ flexShrink: 0, width: '100%', height: '200px', position: 'relative' }}>
             <Image
-              src={image}
+              src={image} // Asegúrate de que `image` sea una ruta a un archivo WebP o AVIF
               alt={title}
               fill // Utiliza fill en lugar de layout
               sizes="(max-width: 600px) 100vw, 300px" // Proporciona un tamaño responsivo

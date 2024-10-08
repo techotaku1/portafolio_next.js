@@ -24,7 +24,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/mi-imagen2.jpg',
+        url: '/mi-imagen2.webp',
         width: 1200,
         height: 630,
         alt: 'Jose David Gonzalez Gonzalez',
@@ -37,7 +37,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
     description: 'Freelancer con experiencia en desarrollo web, marketing digital y creación de presentaciones.',
-    image: '/mi-imagen2.jpg',
+    image: '/mi-imagen2.webp',
   },
   generator: 'Next.js',
   applicationName: 'Jose David Gonzalez Portfolio',
@@ -90,7 +90,6 @@ export default function RootLayout({ children }) {
       <head>
         {/* Meta tag de verificación de Google */}
         <meta name="google-site-verification" content="AGpNPOb2L1Z4p1pOdNGsInrVPMiVKBk020FAa0TxGV0" />
-        
         {/* Renderizando JSON-LD como script dentro de head */}
         <script
           type="application/ld+json"

@@ -35,7 +35,7 @@ export const portfolio = [
     title: "Proyecto CRUD con FastAPI",
     description:
       "Implemente una API-REST con PYTHON y conexión a base de datos SQLite.",
-    image: "/fast_api_ppt.png",
+    image: "/fast_api_ppt.webp",
     repo: "https://github.com/techotaku1/api_rest_crud_fastapi", // URL del repositorio
   },
   {
@@ -48,7 +48,7 @@ export const portfolio = [
     title: "Portafolio en Next.js",
     description:
       "Portafolio personal con manejo de API de GitHub y navegacion de eventos.",
-    image: "/proyectonextjs.jpg",
+    image: "/proyectonextjs.webp",
     repo: "https://github.com/techotaku1/portafolio_next.js", // URL del repositorio
   },
 ];
@@ -57,25 +57,25 @@ const BlogItems = [
   {
     id: 1,
     title: "GATSBY",
-    icon: "/gatsby.png", // Cambia por la ruta correcta de tu icono
+    icon: "/gatsby.webp", // Cambia por la ruta correcta de tu icono
     link: "https://gatsbyjs.com/docs/", // Cambia por la URL que desees
   },
   {
     id: 2,
     title: "NEXT.JS",
-    icon: "/nextjs.png",
+    icon: "/nextjs.webp",
     link: "https://nextjs.org/docs",
   },
   {
     id: 3,
     title: "EXPRESS",
-    icon: "/express.png",
+    icon: "/express.webp",
     link: "https://expressjs.com/es",
   },
   {
     id: 4,
     title: "DJANGO",
-    icon: "/django.png",
+    icon: "/django.webp",
     link: "https://docs.djangoproject.com",
   },
 ];
