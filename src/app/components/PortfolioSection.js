@@ -12,9 +12,9 @@ const PortfolioSection = () => (
       color: "#ffffff",
       boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
       borderRadius: "10px",
-      width: '100vw', // Ocupa todo el ancho de la ventana
-      maxWidth: '100%', // Asegura que no exceda el 100% del viewport
-      mx: 'auto', // Centra el contenido horizontalmente
+      width: "100vw", // Ocupa todo el ancho de la ventana
+      maxWidth: "100%", // Asegura que no exceda el 100% del viewport
+      mx: "auto", // Centra el contenido horizontalmente
     }}
   >
     <Typography variant="h4" align="center" gutterBottom>
@@ -22,9 +22,9 @@ const PortfolioSection = () => (
     </Typography>
     <Box
       sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
         gap: 2, // Espacio entre las tarjetas
       }}
     >
@@ -32,27 +32,35 @@ const PortfolioSection = () => (
         <Box
           key={index}
           sx={{
-            border: '2px solid #ccc',
-            borderRadius: '8px',
-            overflow: 'hidden',
+            border: "2px solid #ccc",
+            borderRadius: "8px",
+            overflow: "hidden",
             backgroundColor: "#fff",
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            width: { xs: '100%', sm: '300px' }, // Tamaño responsivo
-            display: 'flex',
-            flexDirection: 'column',
-            height: 'auto', // Ajuste automático de la altura
+            width: { xs: "100%", sm: "300px" }, // Tamaño responsivo
+            display: "flex",
+            flexDirection: "column",
+            height: "auto", // Ajuste automático de la altura
           }}
         >
           {/* Box para la imagen */}
-          <Box sx={{ flexShrink: 0, width: '100%', height: '200px', position: 'relative' }}>
+          <Box
+            sx={{
+              flexShrink: 0,
+              width: "100%",
+              height: "200px",
+              position: "relative",
+            }}
+          >
             <Image
               src={image} // Asegúrate de que `image` sea una ruta a un archivo WebP o AVIF
               alt={title}
               fill // Utiliza fill en lugar de layout
-              sizes="(max-width: 600px) 100vw, 300px" // Proporciona un tamaño responsivo
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              loading="lazy"
               style={{
-                objectFit: 'contain', // Ajusta la imagen sin recortar
-                display: 'block',
+                objectFit: "contain", // Ajusta la imagen sin recortar
+                display: "block",
               }}
             />
           </Box>
@@ -63,10 +71,10 @@ const PortfolioSection = () => (
               p: 2,
               backgroundColor: "#4a90e2", // Fondo azul igual al del contenedor principal
               color: "#ffffff", // Texto en blanco
-              display: 'flex',
-              flexDirection: 'column',
+              display: "flex",
+              flexDirection: "column",
               flexGrow: 1, // Permite que el contenido crezca
-              justifyContent: 'space-between', // Alinea el texto y el botón en el mismo nivel
+              justifyContent: "space-between", // Alinea el texto y el botón en el mismo nivel
             }}
           >
             <Box>

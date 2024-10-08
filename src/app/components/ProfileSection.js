@@ -56,21 +56,33 @@ const ProfileSection = () => (
           maxWidth: { xs: "100%", md: "70%" },
         }}
       >
-        <Typography variant="h5" component="h1" sx={{ fontWeight: "bold", mb: 1 }}>
+        <Typography
+          variant="h5"
+          component="h1"
+          sx={{ fontWeight: "bold", mb: 1 }}
+        >
           Jose David Gonzalez
         </Typography>
         <Typography variant="h6" component="h2">
           Programador FULL STACK
         </Typography>
         <Typography variant="body1" sx={{ marginTop: 2 }}>
-          Soy un apasionado desarrollador con experiencia en tecnologías frontend y backend. Me especializo en React, Next.js y Python con FastAPI para crear aplicaciones modernas y eficientes.
+          Soy un apasionado desarrollador con experiencia en tecnologías
+          frontend y backend. Me especializo en React, Next.js y Python con
+          FastAPI para crear aplicaciones modernas y eficientes.
         </Typography>
         <Typography variant="body1" sx={{ marginTop: 2 }}>
-          También tengo experiencia en edición de video utilizando CapCut y en la creación de presentaciones con Canva.
+          También tengo experiencia en edición de video utilizando CapCut y en
+          la creación de presentaciones con Canva.
         </Typography>
 
         {/* Contenedor para el botón y los iconos */}
-        <Box display="flex" alignItems="center" justifyContent={{ xs: "center", md: "flex-start" }} sx={{ mt: 2 }}>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent={{ xs: "center", md: "flex-start" }}
+          sx={{ mt: 2 }}
+        >
           {/* Botón de CONTACTAME */}
           <Link
             href="https://docs.google.com/document/d/1kqRV43yV2ZLz0HdBHo_6All556IK-GgFYC-8wb4WUcU/edit?usp=sharing"
@@ -97,13 +109,25 @@ const ProfileSection = () => (
 
           {/* Iconos de contacto */}
           <Box sx={{ display: "flex", gap: 2, ml: 2 }}>
-            <Link href="https://wa.me/573225727602" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/573225727602"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <WhatsAppIcon sx={{ color: "white", cursor: "pointer" }} />
             </Link>
-            <Link href="tel:+573241149554" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="tel:+573241149554"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <PhoneIcon sx={{ color: "white", cursor: "pointer" }} />
             </Link>
-            <Link href="mailto:jsdg1818@gmail.com" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="mailto:jsdg1818@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <EmailIcon sx={{ color: "white", cursor: "pointer" }} />
             </Link>
           </Box>
