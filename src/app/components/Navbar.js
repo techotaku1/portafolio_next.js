@@ -29,7 +29,14 @@ const Navbar = () => {
     setDrawerOpen(open);
   };
 
-  const routes = ["/dashboard/blog", "/dashboard/github", "/dashboard/doc"];
+  // Aquí defines tus rutas, similar a tu componente Links
+  const routes = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/dashboard/blog", label: "BLOG" },
+    { path: "/dashboard/github", label: "GITHUB" },
+    { path: "/dashboard/doc", label: "DOC" },
+  ];
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4a90e2" }}>
@@ -50,9 +57,9 @@ const Navbar = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Box sx={{ display: 'flex', ml: 'auto', mr: 1 }}>
               {routes.map((route, index) => (
-                <Link key={index} href={route} style={{ textDecoration: 'none' }}>
+                <Link key={index} href={route.path} style={{ textDecoration: 'none' }}>
                   <Button
-                    variant={pathname === route ? "outlined" : "text"}
+                    variant={pathname === route.path ? "outlined" : "text"}
                     sx={{
                       color: "common.white",
                       borderColor: "common.white",
@@ -62,7 +69,7 @@ const Navbar = () => {
                       },
                     }}
                   >
-                    {route.split("/").pop().toUpperCase()}
+                    {route.label}
                   </Button>
                 </Link>
               ))}
@@ -93,9 +100,9 @@ const Navbar = () => {
             }}
           >
             {routes.map((route, index) => (
-              <Link key={index} href={route} style={{ textDecoration: 'none' }} onClick={toggleDrawer(false)}>
+              <Link key={index} href={route.path} style={{ textDecoration: 'none' }} onClick={toggleDrawer(false)}>
                 <Button
-                  variant={pathname === route ? "outlined" : "text"}
+                  variant={pathname === route.path ? "outlined" : "text"}
                   sx={{
                     color: "common.white", 
                     borderColor: "common.white", 
@@ -106,7 +113,7 @@ const Navbar = () => {
                     mb: 1, 
                   }}
                 >
-                  {route.split("/").pop().toUpperCase()}
+                  {route.label}
                 </Button>
               </Link>
             ))}
