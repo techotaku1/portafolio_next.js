@@ -11,7 +11,7 @@ export default function NotFound() {
       
       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
         <Image
-          src="/404.jpg" // Ruta a tu imagen 404
+          src="/404.webp" // Ruta a tu imagen 404
           alt="Error 404 - Página no encontrada"
           width={500}
           height={300}
