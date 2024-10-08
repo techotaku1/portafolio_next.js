@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://miportafolio-pied.vercel.app/sitemap.xml',
+    sitemap: 'https://josedavid-portafolio.vercel.app/sitemap.xml',
   }
 }

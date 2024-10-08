@@ -1,6 +1,6 @@
 // app/sitemap.js
 export default function sitemap() {
-  const baseUrl = 'https://miportafolio-pied.vercel.app';
+  const baseUrl = 'https://josedavid-portafolio.vercel.app';
 
   return [
     {
