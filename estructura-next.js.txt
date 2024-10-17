@@ -34,4 +34,8 @@ MI-PORTAFOLIO/
 ├── next.config.js                       // Archivo de configuración para Next.js
 ├── .gitignore                            // Archivo que especifica qué archivos/directorios ignorar en Git
 └── README.md                             // Documentación del proyecto
+<<<<<<< HEAD
 ├── robots.txt                            // Archivo para las directivas de robots
+=======
+├── robots.txt                            // Archivo para las directivas de robots
+>>>>>>> 8e6509118511dbaf17daa43a5d0d1cd482e26ab9

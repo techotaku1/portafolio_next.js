@@ -32,6 +32,10 @@ const Navbar = () => {
   // Aquí defines tus rutas, similar a tu componente Links
   const routes = [
     { path: "/", label: "Home" },
+<<<<<<< HEAD
+=======
+    { path: "/about", label: "About" },
+>>>>>>> 8e6509118511dbaf17daa43a5d0d1cd482e26ab9
     { path: "/dashboard/blog", label: "BLOG" },
     { path: "/dashboard/github", label: "GITHUB" },
     { path: "/dashboard/doc", label: "DOC" },
