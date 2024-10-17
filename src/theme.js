@@ -22,7 +22,7 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.severity === 'info' && {
-            backgroundColor: '#60a5fa', // Color personalizado para alertas con severidad 'info'
+            backgroundColor: '#60a5fa', // Color personalizado para alertas con severidad 'informacion'
           }),
         }),
       },
