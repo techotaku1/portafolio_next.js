@@ -41,12 +41,17 @@ const ProfileSection = () => (
       >
         <Image
           alt="Foto de perfil"
-          src="/mi-imagen2.webp" // Asegúrate de que esta imagen esté en formato WebP
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-       
-          style={{ objectFit: "cover" }} // Asegúrate de que la imagen cubra el contenedor
+          src="/mi-imagen2.webp" // Verifica que esta imagen tenga alta resolución y esté optimizada
+          fill // Usa `fill` para que ocupe todo el contenedor
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" // Define tamaños específicos para cada ancho
+          style={{
+            objectFit: "cover",
+            imageRendering: "auto", // Evita distorsiones en la calidad
+          }}
+          quality={100} // Establece la calidad de la imagen en 100%
+          priority // Asegúrate de que esta imagen tenga prioridad de carga
         />
+        f
       </Box>
 
       {/* Contenedor de texto */}
