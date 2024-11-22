@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Loading from './components/Loading'; // Asegúrate de que la ruta sea correcta
 
 export const metadata = {
   metadataBase: new URL('https://josedavid-portafolio.vercel.app/'),
@@ -15,7 +17,7 @@ export const metadata = {
     'Servicios web para negocios',
     'Consultoría digital',
     'SEO',
-    'Diseño responsivo'
+    'Diseño responsivo',
   ],
   openGraph: {
     title: 'Jose David Gonzalez Gonzalez - Desarrollador Full Stack y Publicidad Digital',
@@ -85,21 +87,35 @@ const jsonLd = {
 };
 
 export default function RootLayout({ children }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Simula el tiempo de carga
+    }, 2000);
+
+    return () => clearTimeout(timer); // Limpia el temporizador al desmontar
+  }, []);
+
   return (
     <html lang="es">
       <head>
-        {/* Meta tag de verificación de Google */}
         <meta name="google-site-verification" content="AGpNPOb2L1Z4p1pOdNGsInrVPMiVKBk020FAa0TxGV0" />
-        {/* Renderizando JSON-LD como script dentro de head */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>
-        <Analytics />
-        <SpeedInsights />
-        {children}
+        {isLoading ? (
+          <Loading /> // Muestra el componente Loading mientras se carga
+        ) : (
+          <>
+            <Analytics />
+            <SpeedInsights />
+            {children} // Renderiza el contenido después de la carga
+          </>
+        )}
       </body>
     </html>
   );
