@@ -1,7 +1,5 @@
-import { useState, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Loading from './components/Loading'; // Asegúrate de que la ruta sea correcta
 
 export const metadata = {
   metadataBase: new URL('https://josedavid-portafolio.vercel.app/'),
@@ -65,11 +63,11 @@ const jsonLd = {
   "url": "https://josedavid-portafolio.vercel.app/",
   "sameAs": [
     "https://www.linkedin.com/in/jjose18",
-    "https://github.com/techotaku1"
+    "https://github.com/techotaku1",
   ],
   "worksFor": {
     "@type": "Organization",
-    "name": "Freelancer"
+    "name": "Freelancer",
   },
   "description": "Desarrollador Full Stack y diseñador web en Colombia, especializado en React, Next.js, publicidad digital y presentaciones profesionales para negocios.",
   "address": {
@@ -77,26 +75,16 @@ const jsonLd = {
     "addressLocality": "Cali",
     "addressRegion": "Cali",
     "postalCode": "760001",
-    "addressCountry": "Colombia"
+    "addressCountry": "Colombia",
   },
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+573225727602",
-    "contactType": "WhatsApp"
-  }
+    "contactType": "WhatsApp",
+  },
 };
 
 export default function RootLayout({ children }) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false); // Simula el tiempo de carga
-    }, 2000);
-
-    return () => clearTimeout(timer); // Limpia el temporizador al desmontar
-  }, []);
-
   return (
     <html lang="es">
       <head>
@@ -107,15 +95,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        {isLoading ? (
-          <Loading /> // Muestra el componente Loading mientras se carga
-        ) : (
-          <>
-            <Analytics />
-            <SpeedInsights />
-            {children} // Renderiza el contenido después de la carga
-          </>
-        )}
+        <Analytics />
+        <SpeedInsights />
+        {children}
       </body>
     </html>
   );

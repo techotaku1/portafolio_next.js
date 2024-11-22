@@ -45,7 +45,7 @@ const ProfileSection = () => (
           fill // Usa `fill` para que ocupe todo el contenedor
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" // Define tamaños específicos para cada ancho
           style={{
-            objectFit: "contain",
+            objectFit: "cover",
             imageRendering: "auto", // Evita distorsiones en la calidad
           }}
           quality={100} // Establece la calidad de la imagen en 100%
