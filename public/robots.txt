@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://josedavid-portafolio.vercel.app
+
+# Sitemaps
+Sitemap: https://josedavid-portafolio.vercel.app/sitemap.xml

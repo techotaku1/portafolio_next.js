@@ -1,6 +1,5 @@
-// next-sitemap.config.js
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://miportafolio-pied.vercel.app', // Cambia esto por tu dominio
-    
-  };
-  
+  siteUrl: 'https://josedavid-portafolio.vercel.app',
+  generateRobotsTxt: true, // Opcional: también genera robots.txt
+};
